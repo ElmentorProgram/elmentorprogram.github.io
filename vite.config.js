@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/elmentor-landing-page/', // Set base for GitHub Pages - correct for project repositories
+  base: '/', // Set base for GitHub Pages - correct for project repositories
   plugins: [react()],
   // Add development server configuration
   server: {
