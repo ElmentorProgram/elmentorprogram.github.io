@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="250" viewBox="0 0 400 250">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0369a1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" fill="url(#bg-gradient)" />
+  
+  <!-- Tokyo skyline silhouette -->
+  <path d="M0,180 L30,180 L35,160 L40,180 L45,170 L50,180 L60,150 L70,180 L80,140 L85,160 L90,150 L95,180 
+           L110,120 L120,180 L130,140 L140,180 L150,130 L160,180 L175,110 L190,180 L200,160 L220,180 
+           L230,150 L240,180 L250,140 L260,180 L270,130 L280,180 L290,120 L300,180 L320,140 L330,160 
+           L340,180 L350,150 L360,180 L380,160 L400,180 L400,250 L0,250 Z" 
+        fill="#0c1529" opacity="0.8"/>
+  
+  <!-- Text -->
+  <text x="200" y="80" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">Tokyo Gathering 2022</text>
+  
+  <!-- Two silhouette figures -->
+  <circle cx="150" cy="140" r="20" fill="#ffffff" opacity="0.6" />
+  <path d="M130,160 C130,180 170,180 170,160" stroke="#ffffff" stroke-width="4" fill="none" />
+  
+  <circle cx="250" cy="140" r="20" fill="#ffffff" opacity="0.6" />
+  <path d="M230,160 C230,180 270,180 270,160" stroke="#ffffff" stroke-width="4" fill="none" />
+</svg>
