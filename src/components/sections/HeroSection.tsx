@@ -13,6 +13,10 @@ export default function HeroSection() {
       {/* Background pattern overlay is handled by CSS */}
       <div className="elmentor-hero-overlay"></div>
         <div className="elmentor-hero-content">
+
+        
+        <h1 className="elmentor-hero-title">  Join Elmentor Program </h1>
+        
         <h1 className="elmentor-hero-title">
           Join Elmentor Program: A Private Community for Continuous Learning and Professional Growth.<br />
           <span className="elmentor-hero-slogan">Empower through mentorship.</span>
