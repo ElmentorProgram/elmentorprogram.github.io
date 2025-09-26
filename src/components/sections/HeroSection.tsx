@@ -15,7 +15,7 @@ export default function HeroSection() {
         <div className="elmentor-hero-content">
 
         
-        <h1 className="elmentor-hero-title">  Join Elmentor Program </h1>
+        <h1 className="elmentor-hero-title"> Mouaz Salah </h1>
         
         <h1 className="elmentor-hero-title">
           Join Elmentor Program: A Private Community for Continuous Learning and Professional Growth.<br />
