@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Button from '../Button';
 import '../../styles/CirclesSection.css';
+import circlesImage from '../../assets/images/circles-diagram.png';
 
 // Using the exact provided descriptions
 const ELMENTOR_CIRCLES = [
@@ -92,7 +93,7 @@ const CirclesSection: React.FC = () => {
           ref={diagramRef}
         >          <div className="circles-image-wrapper">
             <img 
-              src="./assets/circles/elmentor-circles.png" 
+              src={circlesImage} 
               alt="Elmentor Circles Diagram showing the layered structure from Audience to Executives" 
               className="circles-image"
               loading="lazy"

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../styles/FounderSection.css';
-import founderImage from '../../assets/images/founder/mohamed-radwan.png';
+import founderImage from '../../assets/images/mohamed-radwan.png';
 import { FaLinkedin, FaGithub, FaBlog, FaYoutube } from 'react-icons/fa';
 import Button from '../Button';
 
