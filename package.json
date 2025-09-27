@@ -6,7 +6,7 @@
   "description": "Clean, maintainable landing page for Elmentor/DevOps Visions community",
   "scripts": {
     "dev": "vite",
-    "build": "tsc; vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write .",

@@ -10,8 +10,7 @@ export default defineConfig(() => ({
   },
   build: {
     outDir: 'dist',
-    sourcemap: true,
-    assetsDir: 'assets'
+    sourcemap: true
   },
-  base: '/elmentorprogram-test/'
+  base: '/'
 }))
