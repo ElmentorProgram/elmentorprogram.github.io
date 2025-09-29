@@ -22,7 +22,83 @@ npm run build
 # Preview production build
 npm run serve
 ```
+### Temporary Manual Deployment (Codespace) ⚠️
 
+> This is a temporary fallback while automated GitHub Actions deployment is unavailable.  
+> It will be removed once CI deployment is restored.
+
+#### ✅ Prerequisites
+- GitHub Pages is configured to serve from the `gh-pages` branch (Settings → Pages).
+- The repository already contains the scripts:  
+  - `build` (e.g. builds the site into `dist`)  
+  - `deploy:gh-pages` (publishes `dist` to the `gh-pages` branch)  
+- You have permission to push to the repository.
+
+#### 🆕 First-Time Setup in a New Codespace
+```bash
+npm install
+npm run build
+```
+(Optional) Preview locally if a dev server script exists:
+```bash
+npm run dev
+```
+
+#### ⚡ Everyday Quick Deploy
+From the repository root inside the Codespace:
+```bash
+npm run build && npm run deploy:gh-pages
+```
+
+That’s it—once the `deploy:gh-pages` script completes, the site will update (usually within 1–2 minutes).
+
+#### 💡 (Optional) Single Command Helper
+If you *personally* want a one-liner, you can add this to your local `package.json` (NOT added in the repo yet to keep history minimal):
+```json
+"scripts": {
+  "publish": "npm run build && npm run deploy:gh-pages"
+}
+```
+Then run:
+```bash
+npm run publish
+```
+(Do not commit this unless the team agrees.)
+
+#### 🔄 Cache Busting
+If the browser shows an old version, append a query param to assets or page URLs:
+```
+https://<your-site>/<path>?v=$(date +%s)
+```
+Or manually hard refresh (Ctrl+Shift+R / Cmd+Shift+R).
+
+#### 🧹 Recovery / Clean Rebuild
+If builds start failing or output looks stale:
+```bash
+rm -rf node_modules dist package-lock.json
+npm install
+npm run build
+```
+
+#### 🛠️ Troubleshooting
+
+| Symptom | Possible Cause | Fix |
+|---------|----------------|-----|
+| Site not updating after deploy | CDN / browser cache | Use cache busting `?v=timestamp` or hard refresh |
+| `dist` folder empty | Build failed silently | Re-run `npm run build` and inspect errors |
+| Permission denied pushing to `gh-pages` | Missing repo access | Confirm your GitHub role / fork & open PR |
+| `tsc: command not found` (if TypeScript) | Dev deps not installed | Run `npm install` again |
+| Old assets still rendering | Service worker or cached JS | In DevTools: Application → Clear storage → Hard reload |
+| Deploy script exits early | Script expects branch/state | Check `deploy:gh-pages` script body & logs |
+
+#### 🧾 Verification Checklist
+1. `npm run build` finishes with no errors.
+2. `npm run deploy:gh-pages` pushes a new commit to `gh-pages`.
+3. Settings → Pages shows “Published”.
+4. Visit the site with `?v=<new timestamp>` to confirm changes.
+
+#### ⏳ Temporary Notice
+This section is **temporary**. Once automated GitHub Actions deployment is repaired, these manual steps will no longer be required and this subsection will be removed to reduce noise.
 ## 🚀 Deployment
 
 To deploy to GitHub Pages:
