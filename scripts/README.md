@@ -22,16 +22,19 @@ This directory contains utility scripts for developing, building, and deploying 
 ## Usage Examples
 
 ### Deploy to GitHub Pages
+
 ```powershell
 ./scripts/deploy.ps1
 ```
 
 ### Maintain Repository
+
 ```powershell
 ./scripts/maintain.ps1
 ```
 
 ### Move Files to .temp
+
 ```powershell
 ./scripts/move-to-temp.ps1 -SourcePath "path/to/file-or-folder" -DestinationName "optional-new-name"
 ```

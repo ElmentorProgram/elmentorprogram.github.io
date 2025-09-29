@@ -111,6 +111,7 @@ The implementation is ready for asset migration using the provided scripts, foll
 ---
 
 **Next Steps:**
+
 1. Migrate real assets using scripts in ASSET_MIGRATION_GUIDE.md
 2. Perform final browser testing across platforms
 3. Deploy to production environment

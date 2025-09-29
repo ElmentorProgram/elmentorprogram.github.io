@@ -51,7 +51,7 @@
 }
 
 .about__list li::before {
-  content: '•';
+  content: "•";
   color: var(--color-primary);
   font-weight: bold;
   position: absolute;

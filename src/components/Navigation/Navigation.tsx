@@ -1,70 +1,70 @@
-import React, { useState, useEffect } from 'react'
-import { Menu, X, Globe } from 'lucide-react'
-import { useLanguage } from '../../contexts/LanguageContext'
-import { useTranslations } from '../../utils/translations'
-import './Navigation.css'
+import React, { useState, useEffect } from "react";
+import { Menu, X, Globe } from "lucide-react";
+import { useLanguage } from "../../contexts/LanguageContext";
+import { useTranslations } from "../../utils/translations";
+import "./Navigation.css";
 
 const Navigation: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const { language, setLanguage, isRTL } = useLanguage()
-  const t = useTranslations(language)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const { language, setLanguage, isRTL } = useLanguage();
+  const t = useTranslations(language);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
+      setIsScrolled(window.scrollY > 50);
+    };
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const closeMenu = () => {
-    setIsMenuOpen(false)
-  }
+    setIsMenuOpen(false);
+  };
 
   const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'ar' : 'en')
-    setIsMenuOpen(false)
-  }
+    setLanguage(language === "en" ? "ar" : "en");
+    setIsMenuOpen(false);
+  };
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
+    const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-    closeMenu()
-  }
+    closeMenu();
+  };
 
   const navItems = [
-    { id: 'hero', label: t.navigation.home },
-    { id: 'about', label: t.navigation.about },
-    { id: 'circles', label: t.navigation.circles },
-    { id: 'activities', label: t.navigation.activities },
-    { id: 'founder', label: t.navigation.founder },
-    { id: 'news', label: t.navigation.news },
-    { id: 'contact', label: t.navigation.contact },
-    { id: 'community', label: t.navigation.community }
-  ]
+    { id: "hero", label: t.navigation.home },
+    { id: "about", label: t.navigation.about },
+    { id: "circles", label: t.navigation.circles },
+    { id: "activities", label: t.navigation.activities },
+    { id: "founder", label: t.navigation.founder },
+    { id: "news", label: t.navigation.news },
+    { id: "contact", label: t.navigation.contact },
+    { id: "community", label: t.navigation.community },
+  ];
 
   return (
     <>
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>
-      <nav 
-        className={`navigation ${isScrolled ? 'scrolled' : ''} ${isRTL ? 'rtl' : ''}`}
+      <nav
+        className={`navigation ${isScrolled ? "scrolled" : ""} ${isRTL ? "rtl" : ""}`}
         role="navigation"
         aria-label="Main navigation"
       >
         <div className="navigation__container">
           <div className="navigation__brand">
             <button
-              onClick={() => scrollToSection('hero')}
+              onClick={() => scrollToSection("hero")}
               className="navigation__logo"
               aria-label="Go to homepage"
             >
@@ -88,15 +88,15 @@ const Navigation: React.FC = () => {
                 </li>
               ))}
             </ul>
-            
+
             <button
               onClick={toggleLanguage}
               className="navigation__language-toggle"
-              aria-label={`Switch to ${language === 'en' ? 'Arabic' : 'English'}`}
+              aria-label={`Switch to ${language === "en" ? "Arabic" : "English"}`}
               title={t.navigation.language}
             >
               <Globe size={20} />
-              <span>{language === 'en' ? 'ع' : 'EN'}</span>
+              <span>{language === "en" ? "ع" : "EN"}</span>
             </button>
           </div>
 
@@ -104,7 +104,7 @@ const Navigation: React.FC = () => {
           <button
             onClick={toggleMenu}
             className="navigation__mobile-toggle"
-            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
           >
@@ -113,9 +113,9 @@ const Navigation: React.FC = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div 
+        <div
           id="mobile-menu"
-          className={`navigation__mobile ${isMenuOpen ? 'open' : ''}`}
+          className={`navigation__mobile ${isMenuOpen ? "open" : ""}`}
           role="menu"
           aria-hidden={!isMenuOpen}
         >
@@ -138,7 +138,9 @@ const Navigation: React.FC = () => {
                 role="menuitem"
               >
                 <Globe size={20} />
-                <span>{t.navigation.language} ({language === 'en' ? 'ع' : 'EN'})</span>
+                <span>
+                  {t.navigation.language} ({language === "en" ? "ع" : "EN"})
+                </span>
               </button>
             </li>
           </ul>
@@ -146,7 +148,7 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Overlay */}
         {isMenuOpen && (
-          <div 
+          <div
             className="navigation__overlay"
             onClick={closeMenu}
             aria-hidden="true"
@@ -154,7 +156,7 @@ const Navigation: React.FC = () => {
         )}
       </nav>
     </>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

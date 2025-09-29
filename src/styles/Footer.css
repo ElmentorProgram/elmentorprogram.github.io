@@ -42,7 +42,7 @@
   font-size: var(--font-size-sm);
   line-height: var(--line-height-relaxed);
   max-width: 450px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: var(--spacing-md) 0 0 0;
 }
 
@@ -78,7 +78,7 @@
 }
 
 .footer-link {
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   font-size: var(--font-size-sm);
   transition: var(--transition-base);
@@ -116,7 +116,7 @@
 
 .footer-cta-text {
   font-size: var(--font-size-sm);
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: var(--spacing-lg);
   line-height: var(--line-height-relaxed);
 }
@@ -124,7 +124,7 @@
 .footer-copyright {
   text-align: left;
   font-size: var(--font-size-xs);
-  color: #FFFFFF;
+  color: #ffffff;
   padding-top: var(--spacing-lg);
   margin-top: var(--spacing-lg);
   border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -133,7 +133,7 @@
 .footer-built-with {
   margin-top: var(--spacing-sm);
   font-size: var(--font-size-xs);
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 /* Responsive adjustments */
@@ -176,20 +176,20 @@
   .elmentor-footer {
     padding: var(--spacing-2xl) 0 var(--spacing-md) 0;
   }
-  
+
   .footer-container {
     padding: 0 var(--spacing-md);
   }
-  
+
   .footer-attribution,
   .footer-link {
     font-size: var(--font-size-xs);
   }
-  
+
   .footer-copyright {
     font-size: var(--font-size-xs);
   }
-  
+
   .footer-devops-logo {
     height: 40px;
     filter: brightness(1.2);

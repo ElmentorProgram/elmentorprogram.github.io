@@ -2,7 +2,7 @@
 .activities-section {
   padding: var(--spacing-4xl) 0;
   background-color: var(--color-white);
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(222, 236, 249, 0.3) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(222, 236, 249, 0.3) 1px, transparent 1px);
   background-size: 35px 35px;
@@ -10,15 +10,16 @@
 }
 
 .activities-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 6px;
-  background: linear-gradient(90deg, 
-    var(--color-primary-300), 
-    var(--color-primary-500), 
+  background: linear-gradient(
+    90deg,
+    var(--color-primary-300),
+    var(--color-primary-500),
     var(--color-primary-700)
   );
 }
@@ -32,7 +33,9 @@
 .activities-header {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
   text-align: center;
 }
 
@@ -53,7 +56,7 @@
 }
 
 .activities-title::after {
-  content: '';
+  content: "";
   display: block;
   width: 80px;
   height: 4px;
@@ -85,7 +88,10 @@
   padding: var(--spacing-xl);
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--color-gray-100);
-  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
   position: relative;
   overflow: hidden;
   opacity: 0;
@@ -96,7 +102,7 @@
 }
 
 .activity-category-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -154,7 +160,9 @@
   margin-bottom: var(--spacing-sm);
   line-height: var(--line-height-relaxed);
   font-family: var(--font-family-body);
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
   padding: var(--spacing-xs) 0;
   opacity: 0;
   animation: fadeInItem 0.5s forwards;
@@ -203,7 +211,10 @@
   box-shadow: var(--shadow-sm);
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease, box-shadow 0.4s ease;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease,
+    box-shadow 0.4s ease;
 }
 
 .activities-cta.animate-in {
@@ -236,12 +247,24 @@
 }
 
 /* Animation timing delays */
-.activity-category-card:nth-child(1) { transition-delay: 0ms; }
-.activity-category-card:nth-child(2) { transition-delay: 100ms; }
-.activity-category-card:nth-child(3) { transition-delay: 200ms; }
-.activity-category-card:nth-child(4) { transition-delay: 300ms; }
-.activity-category-card:nth-child(5) { transition-delay: 400ms; }
-.activity-category-card:nth-child(6) { transition-delay: 500ms; }
+.activity-category-card:nth-child(1) {
+  transition-delay: 0ms;
+}
+.activity-category-card:nth-child(2) {
+  transition-delay: 100ms;
+}
+.activity-category-card:nth-child(3) {
+  transition-delay: 200ms;
+}
+.activity-category-card:nth-child(4) {
+  transition-delay: 300ms;
+}
+.activity-category-card:nth-child(5) {
+  transition-delay: 400ms;
+}
+.activity-category-card:nth-child(6) {
+  transition-delay: 500ms;
+}
 
 /* Responsive adjustments */
 @media (max-width: 767px) {
@@ -249,43 +272,43 @@
     padding: var(--spacing-3xl) 0;
     background-size: 20px 20px; /* Smaller pattern on mobile */
   }
-  
+
   .activities-grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
   }
-  
+
   .activities-title {
     font-size: var(--font-size-3xl);
   }
-  
+
   .activities-subtitle {
     font-size: var(--font-size-base);
     margin-bottom: var(--spacing-xl);
   }
-  
+
   .activity-category-title {
     font-size: var(--font-size-lg);
   }
-  
+
   .activity-item {
     font-size: var(--font-size-sm);
   }
-  
+
   .activities-cta {
     padding: var(--spacing-xl) var(--spacing-md);
     margin-top: var(--spacing-xl);
   }
-  
+
   .activities-cta-text {
     font-size: var(--font-size-lg);
   }
-  
+
   .activities-cta-buttons {
     flex-direction: column;
     gap: var(--spacing-sm);
   }
-  
+
   .activities-cta-buttons .btn {
     width: 100%;
     max-width: 280px;
@@ -303,11 +326,11 @@
   .activities-container {
     padding: 0 var(--spacing-md);
   }
-  
+
   .activity-category-card {
     padding: var(--spacing-md);
   }
-  
+
   .activities-cta {
     margin-top: var(--spacing-2xl);
     padding-top: var(--spacing-xl);

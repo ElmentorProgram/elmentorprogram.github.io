@@ -58,18 +58,22 @@ The repository includes automated GitHub Actions workflows:
 ## Best Practices for Conflict-Free Development
 
 1. **Regular Updates**:
+
    - Keep feature branches updated with the latest master changes
    - Use `git pull origin master` regularly on your feature branch
 
 2. **Small, Focused PRs**:
+
    - Create smaller PRs focused on specific changes
    - Break large changes into multiple PRs
 
 3. **Use Labels**:
+
    - Add the "automerge" label to PRs that can be automatically merged
    - Use "work in progress" label for PRs not ready to merge
 
 4. **Review GitHub Actions Results**:
+
    - Check the PR validation output for potential conflicts
    - Address any issues before merging
 

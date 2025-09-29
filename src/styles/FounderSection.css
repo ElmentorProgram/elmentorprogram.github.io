@@ -201,11 +201,11 @@
   .founder-section-title {
     font-size: var(--font-size-3xl);
   }
-  
+
   .founder-name {
     font-size: var(--font-size-xl);
   }
-  
+
   .founder-title {
     font-size: var(--font-size-base);
   }
@@ -213,7 +213,7 @@
   .founder-bio {
     font-size: var(--font-size-sm);
   }
-  
+
   .founder-social-link {
     padding: var(--spacing-sm) var(--spacing-md);
     font-size: var(--font-size-sm);

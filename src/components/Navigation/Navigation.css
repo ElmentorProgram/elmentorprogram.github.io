@@ -245,19 +245,19 @@
   .navigation__desktop {
     display: none;
   }
-  
+
   .navigation__mobile-toggle {
     display: flex;
   }
-  
+
   .navigation__container {
     height: 3.5rem;
   }
-  
+
   .navigation__logo-text {
     font-size: var(--font-size-lg);
   }
-  
+
   .navigation__logo-subtitle {
     font-size: 0.625rem;
   }
@@ -267,7 +267,7 @@
   .navigation__container {
     padding: 0 var(--spacing-md);
   }
-  
+
   .navigation__mobile-link {
     padding: var(--spacing-md);
   }
@@ -278,11 +278,11 @@
   .navigation {
     background: rgba(31, 41, 55, 0.95);
   }
-  
+
   .navigation.scrolled {
     background: rgba(31, 41, 55, 0.98);
   }
-  
+
   .navigation__mobile {
     background: var(--background-primary);
   }

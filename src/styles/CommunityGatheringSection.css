@@ -3,23 +3,29 @@
 .community-gathering-section {
   padding: var(--spacing-3xl) var(--spacing-lg);
   /* Using unified background styles - primary section */
-  background: linear-gradient(135deg, var(--color-gray-50) 0%, var(--color-primary-50) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-gray-50) 0%,
+    var(--color-primary-50) 100%
+  );
   position: relative;
 }
 
 /* Subtle background pattern */
 .community-gathering-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
+  background-image:
     radial-gradient(var(--color-primary-100) 1px, transparent 1px),
     radial-gradient(var(--color-primary-100) 1px, transparent 1px);
   background-size: 40px 40px;
-  background-position: 0 0, 20px 20px;
+  background-position:
+    0 0,
+    20px 20px;
   opacity: 0.4;
   pointer-events: none;
 }
@@ -60,7 +66,9 @@
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-md);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   background-color: var(--color-white);
 }
 
@@ -181,7 +189,7 @@
     flex-direction: column;
     align-items: center;
   }
-  
+
   .gathering-card {
     max-width: 100%;
   }

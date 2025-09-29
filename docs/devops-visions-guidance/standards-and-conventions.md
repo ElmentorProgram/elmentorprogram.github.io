@@ -43,8 +43,10 @@ This document outlines the coding standards, formatting conventions, and best pr
 - \eature/description\ - For new features
 - \ugfix/description\ - For bug fixes
 - \hotfix/description\ - For urgent production fixes
-- \elease/version\ - For final testing before release
-- \efactor/description\ - For code improvements without behavior changes
+- \
+  elease/version\ - For final testing before release
+- \
+  efactor/description\ - For code improvements without behavior changes
 
 ### Commits
 
@@ -72,8 +74,8 @@ Example: \Add user authentication system (#42)\
 
 ## Special Guidelines for Elmentor Landing Page
 
-- **DO NOT modify the website source code in \src/\**
-- **DO NOT modify public assets in \public/\**
+- \*\*DO NOT modify the website source code in \src/\*\*
+- \*\*DO NOT modify public assets in \public/\*\*
 - **DO NOT modify build configuration files**
 - **DO NOT modify deployment scripts**
 

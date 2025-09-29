@@ -36,6 +36,7 @@ elmentor-landing-page-clean/
 **Problem:** Broken image links or missing assets in production.
 
 **Solution:**
+
 - Always use relative paths for assets
 - For public assets, use paths like `./assets/logos/logo.png`
 - For imported assets in components, use import statements: `import logoImage from '../assets/images/logo.png'`
@@ -46,6 +47,7 @@ elmentor-landing-page-clean/
 **Problem:** Links break when deployed to GitHub Pages.
 
 **Solution:**
+
 - Ensure `vite.config.ts` has the correct `base` path: `/elmentor-landing-page-clean/`
 - For navigation within the app, use relative paths
 
@@ -54,6 +56,7 @@ elmentor-landing-page-clean/
 **Problem:** Style conflicts and maintenance difficulties.
 
 **Solution:**
+
 - Keep component-specific CSS in separate files named after the component
 - Use consistent naming conventions (e.g., BEM)
 - Use CSS variables for shared values
@@ -63,6 +66,7 @@ elmentor-landing-page-clean/
 **Problem:** Build failures due to missing dependencies.
 
 **Solution:**
+
 - Regularly update `package.json` with all required dependencies
 - Use `--save` flag when installing new packages
 - Document any non-standard dependencies
@@ -72,6 +76,7 @@ elmentor-landing-page-clean/
 **Problem:** Arabic version layout or routing issues.
 
 **Solution:**
+
 - Ensure proper RTL support
 - Test Arabic routes thoroughly
 - Maintain translation consistency
@@ -79,11 +84,13 @@ elmentor-landing-page-clean/
 ## Deployment Best Practices
 
 1. **Pre-Deployment Check:**
+
    - Run `npm run build` locally first
    - Verify all assets are properly referenced
    - Check for TypeScript errors with `npx tsc --noEmit`
 
 2. **Use the Clean Deployment Script:**
+
    - Use `deploy-clean.ps1` (PowerShell) or `deploy-clean.bat` (Batch)
    - The script includes checks for common issues
 
@@ -95,11 +102,13 @@ elmentor-landing-page-clean/
 ## Maintaining Code Quality
 
 1. **Component Organization:**
+
    - Keep components focused on a single responsibility
    - Extract reusable parts into separate components
    - Use consistent props and naming conventions
 
 2. **TypeScript Usage:**
+
    - Define interfaces for all component props
    - Use proper typing for functions and variables
    - Avoid using `any` type where possible
@@ -112,6 +121,7 @@ elmentor-landing-page-clean/
 ## Version Control Practices
 
 1. **Commit Organization:**
+
    - Make small, focused commits
    - Write descriptive commit messages
    - Group related changes together

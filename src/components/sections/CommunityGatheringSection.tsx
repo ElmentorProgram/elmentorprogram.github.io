@@ -1,28 +1,33 @@
-import React from 'react';
-import '../../styles/CommunityGatheringSection.css';
-import { FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa';
+import React from "react";
+import "../../styles/CommunityGatheringSection.css";
+import { FaMapMarkerAlt, FaCalendarAlt } from "react-icons/fa";
 
 // Community gathering data
-const COMMUNITY_GATHERINGS = [  {    id: 'japan2022',
-    title: 'Japan/Tokyo Nov 2022',
-    location: 'Tokyo, Japan',
-    date: 'November 2022',
-    image: 'https://raw.githubusercontent.com/MohamedRadwan-DevOps/devops-step-by-step/main/source/images/mics/jap-nov-23.jpg'
+const COMMUNITY_GATHERINGS = [
+  {
+    id: "japan2022",
+    title: "Japan/Tokyo Nov 2022",
+    location: "Tokyo, Japan",
+    date: "November 2022",
+    image:
+      "https://raw.githubusercontent.com/MohamedRadwan-DevOps/devops-step-by-step/main/source/images/mics/jap-nov-23.jpg",
   },
   {
-    id: 'egypt2023',
-    title: 'Egypt/Cairo Feb 2023',
-    location: 'Cairo, Egypt',
-    date: 'February 2023',
-    image: 'https://raw.githubusercontent.com/MohamedRadwan-DevOps/devops-step-by-step/main/source/images/mics/eg-2-23.jpg'
+    id: "egypt2023",
+    title: "Egypt/Cairo Feb 2023",
+    location: "Cairo, Egypt",
+    date: "February 2023",
+    image:
+      "https://raw.githubusercontent.com/MohamedRadwan-DevOps/devops-step-by-step/main/source/images/mics/eg-2-23.jpg",
   },
   {
-    id: 'usa2023',
-    title: 'USA/Seattle April 2023',
-    location: 'Seattle, USA',
-    date: 'April 2023',
-    image: 'https://raw.githubusercontent.com/MohamedRadwan-DevOps/devops-step-by-step/main/source/images/mics/usa-apr-23.jpg'
-  }
+    id: "usa2023",
+    title: "USA/Seattle April 2023",
+    location: "Seattle, USA",
+    date: "April 2023",
+    image:
+      "https://raw.githubusercontent.com/MohamedRadwan-DevOps/devops-step-by-step/main/source/images/mics/usa-apr-23.jpg",
+  },
 ];
 
 const CommunityGatheringSection: React.FC = () => {
@@ -30,20 +35,20 @@ const CommunityGatheringSection: React.FC = () => {
     <section className="community-gathering-section" id="gatherings">
       <div className="container">
         <h2 className="section-title">Community Gathering</h2>
-        
+
         <p className="section-description">
-          Join our global community of DevOps professionals and mentoring enthusiasts. Our gatherings bring 
-          together passionate individuals from around the world to share knowledge, network, and grow 
-          together.
+          Join our global community of DevOps professionals and mentoring
+          enthusiasts. Our gatherings bring together passionate individuals from
+          around the world to share knowledge, network, and grow together.
         </p>
-        
+
         <div className="gathering-cards">
           {COMMUNITY_GATHERINGS.map((gathering) => (
             <div key={gathering.id} className="gathering-card">
               <div className="gathering-image-container">
-                <img 
-                  src={gathering.image} 
-                  alt={`${gathering.title} community gathering`} 
+                <img
+                  src={gathering.image}
+                  alt={`${gathering.title} community gathering`}
                   className="gathering-image"
                 />
               </div>
@@ -63,9 +68,16 @@ const CommunityGatheringSection: React.FC = () => {
             </div>
           ))}
         </div>
-        
-        <div className="gathering-join-cta">          <p>Want to join our next gathering or organize one in your city?</p>
-          <a href="https://www.facebook.com/mradwandevops" className="messenger-button" target="_blank" rel="noopener noreferrer">
+
+        <div className="gathering-join-cta">
+          {" "}
+          <p>Want to join our next gathering or organize one in your city?</p>
+          <a
+            href="https://www.facebook.com/mradwandevops"
+            className="messenger-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Message Eng Mohamed Radwan on Facebook
           </a>
         </div>

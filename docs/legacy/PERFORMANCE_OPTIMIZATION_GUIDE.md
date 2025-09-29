@@ -9,28 +9,30 @@ This guide provides detailed information about the performance optimizations imp
 #### Intersection Observer
 
 Several components use the Intersection Observer API to optimize performance by:
+
 - Loading images and animations only when they're visible in the viewport
 - Disabling scroll listeners when elements are out of view
 - Reducing unnecessary DOM manipulations
 
 Example implementation in `HeroSection.tsx`:
+
 ```tsx
 // Use Intersection Observer if available for better performance
-if ('IntersectionObserver' in window) {
+if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
     (entries) => {
       setIsVisible(entries[0].isIntersecting);
     },
-    { threshold: 0.1 }
+    { threshold: 0.1 },
   );
-  
+
   if (heroRef.current) {
     observer.observe(heroRef.current);
   }
-  
+
   // Only attach scroll listener when element is visible
   if (isVisible) {
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
   }
 }
 ```
@@ -38,18 +40,20 @@ if ('IntersectionObserver' in window) {
 #### Request Animation Frame
 
 Animations and scroll effects use `requestAnimationFrame` to:
+
 - Synchronize changes with the browser's repaint cycle
 - Throttle expensive operations
 - Improve animation smoothness
 
 Example implementation:
+
 ```tsx
 if (!ticking.current) {
   requestAnimationFrame(() => {
     // Animation code here
     ticking.current = false;
   });
-  
+
   ticking.current = true;
 }
 ```
@@ -63,10 +67,11 @@ if (!ticking.current) {
 - Image formats are optimized for web display
 
 Example implementation:
+
 ```tsx
-<img 
+<img
   src={founderImage}
-  alt={`${founderName}, Microsoft DevOps MVP and Founder of DevOps Visions Program`} 
+  alt={`${founderName}, Microsoft DevOps MVP and Founder of DevOps Visions Program`}
   className="founder-image"
   loading="lazy"
   decoding="async"
@@ -86,12 +91,14 @@ Example implementation:
 #### Event Delegation
 
 Event delegation is used to minimize the number of event listeners:
+
 - Instead of attaching listeners to many individual elements, we attach to parent containers
 - This reduces memory usage and improves event handling performance
 
 #### Debouncing and Throttling
 
 Expensive operations (like scroll handlers) are optimized through:
+
 - Throttling to limit the execution frequency
 - Debouncing to delay execution until after a period of inactivity
 - `requestAnimationFrame` to synchronize with the browser's rendering cycle
@@ -99,6 +106,7 @@ Expensive operations (like scroll handlers) are optimized through:
 ### 4. Build Optimizations
 
 The project uses Vite for modern build optimizations:
+
 - ES modules for efficient code splitting
 - Tree shaking to eliminate unused code
 - Asset optimization and compression
@@ -109,13 +117,14 @@ The project uses Vite for modern build optimizations:
 ### 1. Code Splitting and Lazy Loading
 
 Implement React.lazy and Suspense to:
+
 - Load components only when needed
 - Reduce initial bundle size
 - Improve time-to-interactive
 
 ```tsx
 // Example implementation
-const LazyComponent = React.lazy(() => import('./LazyComponent'));
+const LazyComponent = React.lazy(() => import("./LazyComponent"));
 
 function App() {
   return (
@@ -129,18 +138,15 @@ function App() {
 ### 2. Image Optimization Pipeline
 
 Set up automated image optimization in the build pipeline:
+
 - Configure image compression plugins for Vite
 - Convert images to modern formats like WebP where supported
 - Implement responsive images with srcset and sizes attributes
 
 ```html
 <!-- Example responsive image implementation -->
-<img 
-  srcset="
-    image-320w.jpg 320w,
-    image-480w.jpg 480w,
-    image-800w.jpg 800w
-  "
+<img
+  srcset="image-320w.jpg 320w, image-480w.jpg 480w, image-800w.jpg 800w"
   sizes="(max-width: 600px) 100vw, 50vw"
   src="image-800w.jpg"
   alt="Description"
@@ -150,6 +156,7 @@ Set up automated image optimization in the build pipeline:
 ### 3. Performance Monitoring
 
 Implement real-time performance monitoring:
+
 - Set up Core Web Vitals measurement
 - Configure performance budget alerts
 - Track user experience metrics
@@ -158,7 +165,7 @@ Implement real-time performance monitoring:
 
 ```tsx
 // Example implementation for monitoring LCP
-import { getLCP } from 'web-vitals';
+import { getLCP } from "web-vitals";
 
 function reportLCP(metric) {
   console.log(metric.name, metric.value);
@@ -171,6 +178,7 @@ getLCP(reportLCP);
 ### 4. Caching Strategy
 
 Implement an effective caching strategy:
+
 - Configure appropriate cache headers
 - Use cache busting for updated assets
 - Implement service workers for offline support
@@ -178,6 +186,7 @@ Implement an effective caching strategy:
 ### 5. Critical CSS Path
 
 Extract and inline critical CSS:
+
 - Identify CSS needed for above-the-fold content
 - Inline it in the document head
 - Defer loading non-critical CSS
@@ -187,14 +196,17 @@ Extract and inline critical CSS:
 Before deployment, verify performance improvements with:
 
 1. **Lighthouse Audit**
+
    - Aim for 90+ scores in all categories
    - Pay special attention to Largest Contentful Paint (LCP) and Time to Interactive (TTI)
 
 2. **WebPageTest**
+
    - Test from multiple locations
    - Check TTFB, Speed Index, and Visual Complete metrics
 
 3. **Chrome DevTools Performance Panel**
+
    - Analyze rendering performance
    - Look for long tasks and layout shifts
 

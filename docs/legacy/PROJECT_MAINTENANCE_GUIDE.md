@@ -93,10 +93,11 @@ The project uses a consistent design system implemented through CSS variables in
 4. Import the CSS file in the component or in `App.tsx`
 
 Example:
+
 ```tsx
 // NewSection.tsx
-import React from 'react';
-import '../styles/NewSection.css';
+import React from "react";
+import "../styles/NewSection.css";
 
 const NewSection: React.FC = () => {
   return (
@@ -116,11 +117,12 @@ export default NewSection;
 
 1. Place image files in `src/assets/images/` or `public/`
 2. Import and use in components:
+
    ```tsx
-   import newImage from '../../assets/images/new-image.png';
-   
+   import newImage from "../../assets/images/new-image.png";
+
    // Then use in JSX
-   <img src={newImage} alt="Description" />
+   <img src={newImage} alt="Description" />;
    ```
 
 ## Common Tasks
@@ -131,8 +133,8 @@ Edit the links array in `Header.tsx`:
 
 ```tsx
 const links = [
-  { href: '#hero', text: 'Home' },
-  { href: '#about', text: 'About' },
+  { href: "#hero", text: "Home" },
+  { href: "#about", text: "About" },
   // Add new navigation items here
 ];
 ```
@@ -142,7 +144,9 @@ const links = [
 Edit the links in `Footer.tsx`:
 
 ```tsx
-<a href="#new-section" className="footer-link">New Section</a>
+<a href="#new-section" className="footer-link">
+  New Section
+</a>
 ```
 
 ### Modifying the Color Scheme
@@ -172,16 +176,19 @@ Extend the Button component in `Button.tsx` and add corresponding styles in `But
 ## Troubleshooting
 
 ### Image Not Displaying
+
 - Check file path and import statement
 - Verify file exists in the correct location
 - Check browser console for 404 errors
 
 ### CSS Not Applied
+
 - Check class names match between component and CSS file
 - Verify CSS file is imported
 - Check for specificity issues
 
 ### Component Not Rendering
+
 - Check import/export statements
 - Verify component is included in the parent component
 - Check for TypeScript or React errors

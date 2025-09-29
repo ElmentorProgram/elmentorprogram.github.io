@@ -28,10 +28,12 @@ Thank you for your interest in contributing to the Elmentor Landing Page project
 #### For Documentation, Templates, and Non-Website Changes
 
 1. **Fork the repository** and create a branch from \main\ with an appropriate name:
+
    - \eature/description\ for features
    - \ugfix/description\ for bug fixes
    - \docs/description\ for documentation
-   - \efactor/description\ for code refactoring
+   - \
+     efactor/description\ for code refactoring
 
 2. **Make your changes** following coding standards and conventions.
 
@@ -66,19 +68,19 @@ Thank you for your interest in contributing to the Elmentor Landing Page project
 
 1. Clone the repository:
    `ash
-   git clone https://github.com/DevOpsVisions/elmentor-landing-page-clean.git
-   cd elmentor-landing-page-clean
-   `
+git clone https://github.com/DevOpsVisions/elmentor-landing-page-clean.git
+cd elmentor-landing-page-clean
+`
 
 2. Install dependencies:
    `ash
-   npm install
-   `
+npm install
+`
 
 3. Start the development server:
    `ash
-   npm run dev
-   `
+npm run dev
+`
 
 ### Testing
 
@@ -89,6 +91,7 @@ Thank you for your interest in contributing to the Elmentor Landing Page project
 ## Style Guide
 
 Please follow the DevOps Visions standards and conventions as outlined in:
+
 - [Standards and Conventions](docs/devops-visions-guidance/standards-and-conventions.md)
 - [Naming Conventions](docs/devops-visions-guidance/naming-conventions.md)
 - [Repository Structure](docs/devops-visions-guidance/repository-structure.md)
@@ -100,6 +103,7 @@ Please read our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing to thi
 ## Questions?
 
 If you have questions or need help, please:
+
 1. Check the documentation in the \docs\ directory
 2. Open an issue with the question template
 3. Contact the maintainers through the DevOps Visions community channels

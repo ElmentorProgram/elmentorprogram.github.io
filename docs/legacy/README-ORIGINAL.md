@@ -48,6 +48,7 @@ The landing page is deployed and available at: [https://aymanaboghonim.github.io
 ```
 
 This provides a user-friendly interface to:
+
 - Choose your preferred deployment method
 - Fix Git ownership issues
 - Access documentation
@@ -55,6 +56,7 @@ This provides a user-friendly interface to:
 ### Direct Deployment
 
 1. Make sure you have:
+
    - Git installed
    - Node.js and npm installed
    - GitHub CLI installed and authenticated (`gh auth login`)
@@ -63,8 +65,9 @@ This provides a user-friendly interface to:
    ```bash
    .\direct-deploy.bat
    ```
-   
+
 This will:
+
 - Automatically detect your GitHub username
 - Update all project files with your username
 - Build the project
@@ -76,6 +79,7 @@ This will:
 ### Important Note on Assets and Build
 
 The project currently uses SVG placeholders for certain assets that were not available in the original repository:
+
 - Community gathering images (Tokyo, Cairo, Seattle)
 - Some logo files
 
@@ -91,21 +95,25 @@ There's also a TypeScript build issue in HeroSection.tsx. Use development mode f
 ### Installation
 
 1. Clone this repository:
+
    ```bash
    git clone https://github.com/your-username/elmentor-landing-page-clean.git
    cd elmentor-landing-page-clean
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Migrate assets (if not already done):
+
    - Follow instructions in [ASSET_MIGRATION_GUIDE.md](./ASSET_MIGRATION_GUIDE.md)
    - Or run one of the provided asset copy scripts
 
 4. Start the development server:
+
    ```bash
    npm run dev
    ```
@@ -152,6 +160,7 @@ We've provided several deployment options, but the recommended method is the dir
 ```
 
 This script:
+
 - Works around Git "dubious ownership" errors
 - Automatically detects your GitHub username
 - Updates all project configurations
@@ -163,6 +172,7 @@ This script:
 If you encounter issues with the direct deployment, we've provided alternative approaches:
 
 **Option 1: Fix Git Ownership then Deploy**
+
 ```bash
 # First, fix Git ownership issues:
 .\fix-git-ownership.bat
@@ -173,6 +183,7 @@ If you encounter issues with the direct deployment, we've provided alternative a
 
 **Option 2: Original Deployment Scripts**
 These scripts may work on systems not affected by Git ownership issues:
+
 ```bash
 .\one-click-deploy.bat
 # or
@@ -182,17 +193,20 @@ These scripts may work on systems not affected by Git ownership issues:
 ### Solving the "Dubious Ownership" Error
 
 If you encounter Git "dubious ownership" errors during deployment, please see:
+
 - [GIT_OWNERSHIP_FIX_GUIDE.md](./GIT_OWNERSHIP_FIX_GUIDE.md) - Complete solution to Git ownership issues
 
 ### Detailed Documentation
 
 For additional deployment information:
+
 - [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) - General deployment options
 - [GITHUB_PAGES_DEPLOYMENT.md](./GITHUB_PAGES_DEPLOYMENT.md) - GitHub Pages specific deployment
 - [POST_DEPLOYMENT_CHECKLIST.md](./POST_DEPLOYMENT_CHECKLIST.md) - Post-deployment verification
 - [DEPLOYMENT_SUCCESS.md](./DEPLOYMENT_SUCCESS.md) - Confirmation of successful deployment
 
 **Option 3: CI/CD with GitHub Actions**
+
 - After pushing to GitHub, deployment happens automatically via GitHub Actions workflow
 
 ## Documentation

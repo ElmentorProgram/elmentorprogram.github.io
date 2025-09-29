@@ -67,12 +67,14 @@
   margin-right: auto;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
   position: relative;
 }
 
 .circles-section-title::after {
-  content: '';
+  content: "";
   display: block;
   width: 80px;
   height: 4px;
@@ -91,7 +93,9 @@
   margin-bottom: var(--spacing-xl);
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .circles-explanation.animate-fade-in {
@@ -119,7 +123,9 @@
   margin-top: var(--spacing-xl);
   opacity: 0;
   transform: scale(0.9);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 .circles-diagram.animate-scale-in {
@@ -158,7 +164,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center, rgba(0,120,212,0) 0%, rgba(0,120,212,0.05) 100%);
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 120, 212, 0) 0%,
+    rgba(0, 120, 212, 0.05) 100%
+  );
 }
 
 /* Circles List */
@@ -167,7 +177,9 @@
   margin: 0 auto var(--spacing-3xl);
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .circles-list-container.animate-fade-in-up {
@@ -189,7 +201,10 @@
   color: var(--color-gray-800);
   line-height: var(--line-height-relaxed);
   border-left: 3px solid transparent;
-  transition: border-color 0.3s ease, padding-left 0.3s ease, background-color 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    padding-left 0.3s ease,
+    background-color 0.3s ease;
   opacity: 0;
   transform: translateX(-20px);
   background-color: transparent;
@@ -197,7 +212,7 @@
 }
 
 .circle-item::before {
-  content: '•';
+  content: "•";
   position: absolute;
   left: 0;
   color: var(--color-primary);
@@ -243,7 +258,10 @@
   margin-bottom: var(--spacing-xl);
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease,
+    box-shadow 0.3s ease;
 }
 
 .circles-visual-note.animate-fade-in {
@@ -271,7 +289,9 @@
   gap: var(--spacing-md);
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .circles-cta.animate-fade-in-up {
@@ -324,7 +344,7 @@
   .circles-section-title {
     font-size: var(--font-size-2xl);
   }
-  
+
   .circles-image {
     max-width: 90%;
   }
@@ -334,7 +354,7 @@
   .circles-container {
     padding: 0 var(--spacing-md);
   }
-  
+
   .circles-list li {
     font-size: var(--font-size-sm);
   }

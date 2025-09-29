@@ -3,7 +3,11 @@
   padding: var(--spacing-4xl) 0 var(--spacing-3xl) 0;
   overflow: hidden;
   /* Using unified background styles - primary section */
-  background: linear-gradient(135deg, var(--color-gray-50) 0%, var(--color-primary-50) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-gray-50) 0%,
+    var(--color-primary-50) 100%
+  );
   position: relative;
   border-top: 1px solid var(--color-gray-200);
   border-bottom: 1px solid var(--color-gray-200);
@@ -11,17 +15,19 @@
 
 /* Subtle background pattern - using styles from BackgroundStyles.css */
 .about-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
+  background-image:
     radial-gradient(var(--color-primary-100) 1px, transparent 1px),
     radial-gradient(var(--color-primary-100) 1px, transparent 1px);
   background-size: 40px 40px;
-  background-position: 0 0, 20px 20px;
+  background-position:
+    0 0,
+    20px 20px;
   opacity: 0.4;
 }
 
@@ -43,7 +49,9 @@
   position: relative;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .about-title.animate-in {
@@ -52,7 +60,7 @@
 }
 
 .about-title::after {
-  content: '';
+  content: "";
   display: block;
   width: 80px;
   height: 4px;
@@ -106,7 +114,8 @@
 }
 
 .about-block-inner {
-  padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
+  padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg)
+    var(--spacing-lg);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -159,12 +168,14 @@
 .about-key a {
   color: var(--color-primary);
   text-decoration: none;
-  transition: color 0.2s ease, text-decoration 0.2s ease;
+  transition:
+    color 0.2s ease,
+    text-decoration 0.2s ease;
   position: relative;
 }
 
 .about-key a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -226,7 +237,9 @@
   flex-wrap: wrap;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
   transition-delay: 600ms;
 }
 
@@ -240,35 +253,35 @@
   .about-container {
     padding: 0 var(--spacing-md);
   }
-  
+
   .about-title {
     font-size: var(--font-size-3xl);
   }
-  
+
   .about-subtitle {
     font-size: var(--font-size-lg);
   }
-  
+
   .about-block-inner {
     padding: var(--spacing-lg) var(--spacing-md);
   }
-  
+
   .about-cta {
     flex-direction: column;
     gap: var(--spacing-sm);
     width: 100%;
   }
-  
+
   .about-cta .btn {
     width: 100%;
     max-width: 300px;
   }
-  
+
   /* Slower animations on mobile for better performance */
   .about-block {
     transition: all 0.5s ease;
   }
-  
+
   /* Adjust list spacing on mobile */
   .about-list {
     padding-left: var(--spacing-md);
@@ -280,23 +293,23 @@
     flex-direction: row;
     gap: var(--spacing-lg);
   }
-  
+
   .about-block {
     flex: 1 1 0;
     min-width: 0;
     margin-bottom: 0;
     display: flex;
   }
-  
+
   /* Stagger animations more clearly on desktop */
   .about-block[data-animation-delay="0"] {
     transition-delay: 100ms;
   }
-  
+
   .about-block[data-animation-delay="200"] {
     transition-delay: 300ms;
   }
-  
+
   .about-block[data-animation-delay="400"] {
     transition-delay: 500ms;
   }

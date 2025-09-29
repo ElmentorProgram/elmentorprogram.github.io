@@ -71,19 +71,19 @@ echo Assets copied successfully!
 ```javascript
 // File: copy-assets.js
 
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-const sourceProject = 'd:/Github_personal/aymanaboghonim-landing-page';
-const destProject = 'd:/Github_personal/elmentor-landing-page-clean';
+const sourceProject = "d:/Github_personal/aymanaboghonim-landing-page";
+const destProject = "d:/Github_personal/elmentor-landing-page-clean";
 
 // Create directories if they don't exist
 const directories = [
-  path.join(destProject, 'src', 'assets', 'images'),
-  path.join(destProject, 'public', 'gatherings')
+  path.join(destProject, "src", "assets", "images"),
+  path.join(destProject, "public", "gatherings"),
 ];
 
-directories.forEach(dir => {
+directories.forEach((dir) => {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
@@ -91,33 +91,51 @@ directories.forEach(dir => {
 
 // Copy logo files
 fs.copyFileSync(
-  path.join(sourceProject, 'src', 'assets', 'images', 'aymanaboghonim-logo.svg'),
-  path.join(destProject, 'src', 'assets', 'images', 'aymanaboghonim-logo.svg')
+  path.join(
+    sourceProject,
+    "src",
+    "assets",
+    "images",
+    "aymanaboghonim-logo.svg",
+  ),
+  path.join(destProject, "src", "assets", "images", "aymanaboghonim-logo.svg"),
 );
 
 fs.copyFileSync(
-  path.join(sourceProject, 'src', 'assets', 'images', 'founder-mohamed-radwan.jpg'),
-  path.join(destProject, 'src', 'assets', 'images', 'founder-mohamed-radwan.jpg')
+  path.join(
+    sourceProject,
+    "src",
+    "assets",
+    "images",
+    "founder-mohamed-radwan.jpg",
+  ),
+  path.join(
+    destProject,
+    "src",
+    "assets",
+    "images",
+    "founder-mohamed-radwan.jpg",
+  ),
 );
 
 // Copy circles diagram
 fs.copyFileSync(
-  path.join(sourceProject, 'public', 'aymanaboghonim-circles.png'),
-  path.join(destProject, 'public', 'aymanaboghonim-circles.png')
+  path.join(sourceProject, "public", "aymanaboghonim-circles.png"),
+  path.join(destProject, "public", "aymanaboghonim-circles.png"),
 );
 
 // Copy gathering images
-const gatheringsDir = path.join(sourceProject, 'public', 'gatherings');
+const gatheringsDir = path.join(sourceProject, "public", "gatherings");
 fs.readdirSync(gatheringsDir)
-  .filter(file => file.endsWith('.jpg'))
-  .forEach(file => {
+  .filter((file) => file.endsWith(".jpg"))
+  .forEach((file) => {
     fs.copyFileSync(
       path.join(gatheringsDir, file),
-      path.join(destProject, 'public', 'gatherings', file)
+      path.join(destProject, "public", "gatherings", file),
     );
   });
 
-console.log('Assets copied successfully!');
+console.log("Assets copied successfully!");
 ```
 
 ### 4. Python Script
@@ -173,15 +191,15 @@ echo.
 echo This script will copy all assets from the original project to the clean implementation.
 echo.
 
-set /p CONTINUE=Do you want to continue? (Y/N): 
+set /p CONTINUE=Do you want to continue? (Y/N):
 
 if /i "%CONTINUE%"=="Y" (
     echo.
     echo Copying assets...
-    
+
     REM Execute PowerShell script
     powershell -ExecutionPolicy Bypass -File copy-assets.ps1
-    
+
     echo.
     echo Asset migration complete!
 ) else (
@@ -197,14 +215,17 @@ pause
 If the scripts don't work for any reason, you can manually copy these assets:
 
 1. **Logo Files**:
+
    - Source: `aymanaboghonim-landing-page/src/assets/images/aymanaboghonim-logo.svg`
    - Destination: `elmentor-landing-page-clean/src/assets/images/aymanaboghonim-logo.svg`
 
 2. **Founder Image**:
+
    - Source: `aymanaboghonim-landing-page/src/assets/images/founder-mohamed-radwan.jpg`
    - Destination: `elmentor-landing-page-clean/src/assets/images/founder-mohamed-radwan.jpg`
 
 3. **Circles Diagram**:
+
    - Source: `aymanaboghonim-landing-page/public/aymanaboghonim-circles.png`
    - Destination: `elmentor-landing-page-clean/public/aymanaboghonim-circles.png`
 

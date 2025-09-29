@@ -5,6 +5,7 @@
 The following image placeholders have been updated with professional SVG alternatives:
 
 ### 1. Founder Image
+
 - **File**: `src/assets/images/founder-mohamed-radwan.jpg`
 - **Status**: ✅ UPDATED
 - **Type**: SVG content (with appropriate styling)
@@ -12,6 +13,7 @@ The following image placeholders have been updated with professional SVG alterna
 - **Used in**: FounderSection component
 
 ### 2. Circles Diagram
+
 - **File**: `public/aymanaboghonim-circles.png`
 - **Status**: ✅ UPDATED
 - **Type**: SVG content (with appropriate styling)

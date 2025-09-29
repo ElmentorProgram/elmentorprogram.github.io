@@ -6,11 +6,19 @@
   width: 100%;
   z-index: 1000;
   transition: all 0.3s ease;
-  background: linear-gradient(to right, rgba(0, 69, 120, 0.85), rgba(0, 120, 212, 0.85)); /* Professional gradient with brand colors */
+  background: linear-gradient(
+    to right,
+    rgba(0, 69, 120, 0.85),
+    rgba(0, 120, 212, 0.85)
+  ); /* Professional gradient with brand colors */
   box-shadow: none;
 }
 .elmentor-header.scrolled {
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.98), rgba(222, 236, 249, 0.98)); /* Subtle branded gradient when scrolled */
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.98),
+    rgba(222, 236, 249, 0.98)
+  ); /* Subtle branded gradient when scrolled */
   box-shadow: var(--shadow-sm);
   border-bottom: 1px solid var(--color-gray-200);
 }
@@ -96,7 +104,7 @@
 .lang-btn {
   background: none;
   border: none;
-  color: var(--color-white);  
+  color: var(--color-white);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold); /* Make text bolder */
   cursor: pointer;
@@ -244,6 +252,6 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
   z-index: 1100;
 }

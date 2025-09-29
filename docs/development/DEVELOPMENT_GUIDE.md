@@ -3,6 +3,7 @@
 This document provides comprehensive guidelines and best practices for developing and maintaining the Elmentor Landing Page.
 
 ## Table of Contents
+
 - [Project Structure](#project-structure)
 - [Development Setup](#development-setup)
 - [Coding Standards](#coding-standards)
@@ -32,6 +33,7 @@ elmentor-landing-page-clean/
 ```
 
 Key files:
+
 - `src/App.tsx`: Main application component
 - `src/main.tsx`: Application entry point
 - `vite.config.ts`: Build configuration
@@ -49,17 +51,20 @@ Key files:
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/aymanaboghonim/elmentor-landing-page-clean.git
    cd elmentor-landing-page-clean
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Start the development server:
+
    ```bash
    npm run dev
    ```
@@ -94,17 +99,20 @@ Key files:
 ## Git Workflow
 
 1. Create a feature branch from main:
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
 
 2. Make changes and commit:
+
    ```bash
    git add .
    git commit -m "Descriptive commit message"
    ```
 
 3. Push to your branch:
+
    ```bash
    git push origin feature/your-feature-name
    ```
@@ -132,12 +140,14 @@ Key files:
 ### 404 Errors on Page Refresh
 
 The site uses a HashRouter to prevent 404 errors on GitHub Pages. If you encounter routing issues:
+
 1. Check that HashRouter is being used in `App.tsx`
 2. Ensure that all navigation links use hash-based routing
 
 ### Assets Not Loading
 
 If assets are not loading correctly:
+
 1. Check the base path configuration in `vite.config.ts`
 2. Verify that asset paths in components use the correct relative paths
 3. Ensure public assets are in the correct location

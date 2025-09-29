@@ -33,6 +33,7 @@ All GitHub repository links have been updated to point to the correct organizati
 ## Platform Relationships
 
 These changes help clarify the relationship between the entities:
+
 - Elmentor Program: The private mentoring community (primary focus of this site)
 - DevOps Visions: The professional services organization that operates the Elmentor Program
 - DevOps Visions Public Community: The open community platform for DevOps enthusiasts

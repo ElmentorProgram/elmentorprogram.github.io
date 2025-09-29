@@ -14,13 +14,13 @@ Understanding the distinction between these entities is important:
 
 ### Colors
 
-| Element | Color Code | Usage |
-|---------|------------|-------|
-| Primary Blue | `#1E90FF` | Main brand color, buttons, accents |
-| Deep Blue | `#0057B7` | Headers, navigation |
-| Cyan | `#00C5CD` | Highlights, secondary accents |
-| Light Gray | `#F5F5F5` | Backgrounds, cards |
-| Dark Gray | `#333333` | Text, footers |
+| Element      | Color Code | Usage                              |
+| ------------ | ---------- | ---------------------------------- |
+| Primary Blue | `#1E90FF`  | Main brand color, buttons, accents |
+| Deep Blue    | `#0057B7`  | Headers, navigation                |
+| Cyan         | `#00C5CD`  | Highlights, secondary accents      |
+| Light Gray   | `#F5F5F5`  | Backgrounds, cards                 |
+| Dark Gray    | `#333333`  | Text, footers                      |
 
 ### Typography
 
@@ -31,6 +31,7 @@ Understanding the distinction between these entities is important:
 ### Logo Usage
 
 The Elmentor logo should:
+
 - Maintain proper spacing around all sides
 - Not be stretched or distorted
 - Be displayed prominently on the navbar and footer

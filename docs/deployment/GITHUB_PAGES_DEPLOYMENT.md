@@ -24,6 +24,7 @@ Use our automated script to set up your GitHub repository and update all necessa
 ```
 
 This script will:
+
 1. Check for Git and GitHub CLI installations
 2. Create a new GitHub repository (or use existing)
 3. Set up Git remotes

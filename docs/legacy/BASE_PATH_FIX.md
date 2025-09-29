@@ -7,6 +7,7 @@ We've addressed the issue with the blank page appearing when accessing the appli
 ## Technical Solution
 
 We implemented a dynamic base path configuration in `vite.config.ts` that correctly sets the base path depending on whether the app is running in:
+
 - Development mode (`npm run dev`)
 - Build mode (`npm run build`)
 - Preview mode (`npm run preview`)
@@ -16,6 +17,7 @@ This ensures that all assets are loaded correctly regardless of the environment.
 ## Changes Made
 
 1. **Updated Vite Configuration**:
+
    - Modified `vite.config.ts` to use a dynamic configuration based on the command
    - Set the base path to '/elmentor-landing-page-clean/' for production and preview
    - Set the base path to '/' for development
@@ -36,16 +38,20 @@ This update works together with our previous navigation fix:
 ## Testing the Updated Configuration
 
 1. Development mode:
+
    ```bash
    npm run dev
    ```
+
    Site should load at: http://localhost:3000/
 
 2. Preview mode (after build):
+
    ```bash
    npm run build
    npm run preview
    ```
+
    Site should load at: http://localhost:4173/elmentor-landing-page-clean/
 
 3. Production deployment:

@@ -2,24 +2,30 @@
 .contact-section {
   padding: var(--spacing-4xl) 0;
   /* Using unified background styles - alternate section */
-  background: linear-gradient(135deg, var(--color-primary-800) 0%, var(--color-primary-900) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-800) 0%,
+    var(--color-primary-900) 100%
+  );
   position: relative;
   color: var(--color-white);
 }
 
 /* Subtle background pattern */
 .contact-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
+  background-image:
     radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
     radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 30px 30px;
-  background-position: 0 0, 15px 15px;
+  background-position:
+    0 0,
+    15px 15px;
   opacity: 0.5;
   pointer-events: none;
 }
@@ -138,15 +144,15 @@
   .contact-container {
     padding: 0 var(--spacing-md);
   }
-  
+
   .contact-section-title {
     font-size: var(--font-size-3xl);
   }
-  
+
   .contact-form {
     padding: var(--spacing-lg);
   }
-  
+
   .form-group {
     margin-bottom: var(--spacing-md);
   }
@@ -156,11 +162,11 @@
   .contact-section {
     padding: var(--spacing-2xl) 0;
   }
-  
+
   .contact-container {
     padding: 0 var(--spacing-sm);
   }
-  
+
   .contact-form {
     padding: var(--spacing-md);
   }

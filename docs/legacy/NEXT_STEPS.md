@@ -16,6 +16,7 @@ For a completely hands-off experience with no user interaction:
 ```
 
 This single command will:
+
 - Create a GitHub repository automatically (default username: "aymanaboghonim")
 - Update all configuration files
 - Commit and push code to GitHub
@@ -37,6 +38,7 @@ For an interactive experience with more control:
 ### Option 3: CI/CD with GitHub Actions
 
 After pushing to GitHub (using either Option 1 or 2):
+
 - GitHub Actions workflow will automatically build and deploy
 - The workflow is defined in `.github/workflows/deploy.yml`
 
@@ -62,19 +64,23 @@ Document any issues found during verification for future fixes.
 Consider implementing these key enhancements after successful deployment:
 
 ### Performance Optimizations
+
 - Implement code splitting
 - Further optimize images and assets
 - Add service worker for offline capabilities
 
 ### Analytics and Monitoring
+
 - Set up Google Analytics or equivalent
 - Implement error tracking
 
 ### User Experience Improvements
+
 - Refine animations and interactions
 - Enhance accessibility features
 
 ### Content Management
+
 - Consider adding a simple CMS for news and events
 
 ## 4. Maintenance Plan

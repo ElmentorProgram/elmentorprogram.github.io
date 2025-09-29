@@ -5,14 +5,17 @@
 The Elmentor website repository follows a clean, organized structure to ensure maintainability and ease of navigation:
 
 ### Root Directory
+
 The root directory contains only essential files needed for the project:
+
 - \README.md\: Main project documentation
 - \package.json\ and \package-lock.json\: Node.js dependencies
-- \	sconfig.json\, \ite.config.ts\: Project configuration
+- \ sconfig.json\, \ite.config.ts\: Project configuration
 - \.gitignore\ and other Git configuration files
 - \index.html\: Main entry point for the web application
 
 ### Key Directories
+
 - \/src\: Source code for the website
 - \/public\: Static assets
 - \/dist\: Build output (generated, not committed)
@@ -32,6 +35,7 @@ Documentation is organized into logical categories:
 ## Scripts Organization
 
 All scripts are stored in the \/scripts\ directory:
+
 - \deploy.ps1\: Main GitHub Pages deployment script
 - \direct-deploy.ps1\: Alternative deployment process
 - \maintain.ps1\: Site maintenance utilities
@@ -48,6 +52,7 @@ All scripts are stored in the \/scripts\ directory:
 ## Adding New Files
 
 When adding new files to the repository:
+
 - **Code**: Add to the appropriate directory under /src
 - **Documentation**: Add to the appropriate category in /docs
 - **Scripts**: Add to /scripts

@@ -4,8 +4,7 @@ This document outlines the standard repository structure for DevOps Visions proj
 
 ## Basic Structure
 
-`
-repository-name/
+`repository-name/
 ├── .github/                  # GitHub specific configuration
 │   ├── ISSUE_TEMPLATE/       # Issue templates
 │   ├── PULL_REQUEST_TEMPLATE/ # PR templates
@@ -21,15 +20,13 @@ repository-name/
 ├── CONTRIBUTING.md           # Contribution guidelines
 ├── CODE_OF_CONDUCT.md        # Code of conduct
 ├── SECURITY.md               # Security policy
-└── LICENSE                   # License file
-`
+└── LICENSE                   # License file`
 
 ## Special Structure for Elmentor Landing Page
 
 The Elmentor Landing Page has a specific structure that **must be preserved**:
 
-`
-elmentor-landing-page-clean/
+`elmentor-landing-page-clean/
 ├── dist/                    # Build output
 ├── docs/                    # Documentation
 │   ├── deployment/          # Deployment documentation
@@ -42,8 +39,7 @@ elmentor-landing-page-clean/
 │   └── utils/               # Utility scripts
 ├── .github/                 # GitHub templates and workflows
 ├── .temp/                   # Untracked local development files
-└── src/                     # Source code [DO NOT MODIFY]
-`
+└── src/                     # Source code [DO NOT MODIFY]`
 
 ## Documentation Structure
 

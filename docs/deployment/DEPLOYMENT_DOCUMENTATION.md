@@ -10,11 +10,13 @@ The project includes several deployment scripts with varying levels of functiona
 
 ### 1. Simple Deployment (Recommended)
 
-**Files:** 
+**Files:**
+
 - `scripts/deployment/deploy.ps1` (PowerShell)
 - `scripts/deployment/deploy.bat` (Windows Batch)
 
 **Key Features:**
+
 - Simple and reliable
 - Minimal dependencies
 - Handles GitHub Pages deployment efficiently
@@ -23,6 +25,7 @@ The project includes several deployment scripts with varying levels of functiona
 - Follows DevOps Visions standards
 
 **Usage:**
+
 ```powershell
 # Using PowerShell
 ./scripts/deployment/deploy.ps1
@@ -34,10 +37,12 @@ The project includes several deployment scripts with varying levels of functiona
 ### 2. Clean Structure Deployment
 
 **Files:**
+
 - `scripts/deployment/deploy-clean.ps1` (PowerShell)
 - `scripts/deployment/deploy-clean.bat` (Windows Batch)
 
 **Key Features:**
+
 - Includes extensive pre-deployment checks
 - Verifies assets, dependencies, and configuration
 - Provides detailed feedback during deployment
@@ -46,6 +51,7 @@ The project includes several deployment scripts with varying levels of functiona
 - Follows DevOps Visions standards
 
 **Usage:**
+
 ```powershell
 # Using PowerShell
 ./scripts/deployment/deploy-clean.ps1
@@ -59,20 +65,24 @@ The project includes several deployment scripts with varying levels of functiona
 The deployment process follows these steps:
 
 1. **Build Preparation:**
+
    - Clean up previous build artifacts
    - Ensure all dependencies are installed
    - Verify critical assets are present
 
 2. **Building the Project:**
+
    - Run `npm run build` to create production-ready files
    - Optimize assets and generate output in the `dist` directory
 
 3. **GitHub Pages Setup:**
+
    - Create a `.nojekyll` file to disable Jekyll processing
    - Copy all built files to the deployment directory
    - Initialize a git repository for deployment
 
 4. **Deployment:**
+
    - Push the built files to the `gh-pages` branch
    - This branch is automatically served by GitHub Pages
 
@@ -86,6 +96,7 @@ The deployment process follows these steps:
 If you encounter authentication issues:
 
 1. Ensure you're logged in to GitHub:
+
    ```
    gh auth login
    ```
@@ -101,11 +112,13 @@ If you encounter authentication issues:
 If the build fails:
 
 1. Check for missing dependencies:
+
    ```
    npm install
    ```
 
 2. Verify TypeScript compatibility:
+
    ```
    npx tsc --noEmit
    ```

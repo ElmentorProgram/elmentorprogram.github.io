@@ -20,6 +20,7 @@ Use our simplified deployment batch file:
 ```
 
 This script will:
+
 1. Build the project
 2. Verify the correct base path configuration
 3. Deploy to GitHub Pages
@@ -29,6 +30,7 @@ This script will:
 If you prefer to deploy manually:
 
 1. Build the project:
+
    ```bash
    npm run build
    ```
@@ -46,7 +48,7 @@ The project is configured to use the base path `/elmentor-landing-page-clean/` f
 
 ```typescript
 // For production build and preview
-config.base = '/elmentor-landing-page-clean/'
+config.base = "/elmentor-landing-page-clean/";
 ```
 
 ### Custom Domain Configuration
@@ -66,6 +68,7 @@ The site uses a HashRouter to prevent 404 errors on GitHub Pages. This handles c
 ### Assets Not Loading
 
 If assets are not loading correctly:
+
 1. Check the base path configuration in `vite.config.ts`
 2. Verify that asset paths in components use the correct relative paths
 3. Run `npm run build` and inspect the generated HTML in the `dist` directory

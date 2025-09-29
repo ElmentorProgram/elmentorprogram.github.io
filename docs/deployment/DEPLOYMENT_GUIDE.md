@@ -28,6 +28,7 @@ npm run build
 ```
 
 This command will:
+
 - Compile TypeScript
 - Optimize images
 - Minify CSS/JS
@@ -45,7 +46,7 @@ Add the following to your `vite.config.ts`:
 
 ```typescript
 export default defineConfig({
-  base: '/your-repo-name/', // Replace with your repo name
+  base: "/your-repo-name/", // Replace with your repo name
   plugins: [react()],
   // ...other config
 });
@@ -189,20 +190,24 @@ netlify deploy --prod --dir=dist
 After deploying, verify:
 
 1. **All assets load correctly**:
+
    - Check browser console for 404 errors
    - Verify all images display properly
    - Ensure fonts load correctly
 
 2. **Responsiveness**:
+
    - Test on various screen sizes
    - Use browser dev tools device emulation
 
 3. **Performance**:
+
    - Run Lighthouse audit
    - Check Core Web Vitals
    - Verify load times are acceptable
 
 4. **Accessibility**:
+
    - Test keyboard navigation
    - Verify screen reader compatibility
    - Check color contrast

@@ -25,12 +25,12 @@ We implemented a custom navigation system that:
 ### Local Testing
 
 1. Start the development server:
+
    ```bash
    npm run dev
    ```
 
 2. Navigate to `http://localhost:5173/` in your browser
-   
 3. Test all navigation links in both desktop and mobile versions:
    - Click on each link in the navbar
    - Verify it smoothly scrolls to the correct section
@@ -40,11 +40,13 @@ We implemented a custom navigation system that:
 ### Build and Preview Testing
 
 1. Build the project:
+
    ```bash
    npm run build
    ```
 
 2. Preview the built version:
+
    ```bash
    npm run preview
    ```
@@ -58,6 +60,7 @@ After testing confirms the fix works properly, you can deploy using one of these
 ### Option 1: Using gh-pages (Recommended)
 
 Simply run:
+
 ```bash
 npm run build
 npm run deploy:gh-pages
@@ -68,10 +71,13 @@ This will build the project and deploy it to the `gh-pages` branch of your repos
 ### Option 2: Using the Custom PowerShell Deployment Scripts
 
 Run:
+
 ```bash
 npm run deploy
 ```
+
 or
+
 ```bash
 npm run deploy:auto
 ```
@@ -84,7 +90,7 @@ Visit https://aymanaboghonim.github.io/elmentor-landing-page-clean/ and verify t
 
 1. The site loads correctly
 2. All navigation links work properly
-3. The site is visually consistent 
+3. The site is visually consistent
 4. There are no console errors
 
 ## Further Improvements

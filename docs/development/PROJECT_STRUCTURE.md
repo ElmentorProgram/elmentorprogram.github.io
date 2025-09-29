@@ -51,6 +51,7 @@ Styles are organized using component-specific CSS files:
 Assets are organized in two locations:
 
 1. **Public Assets**: `public/assets/` contains:
+
    - Images loaded at runtime
    - Assets referenced directly by URL
    - Large media files

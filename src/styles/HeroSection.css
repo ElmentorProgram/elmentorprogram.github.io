@@ -7,15 +7,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--color-primary-950) 0%, var(--color-primary-900) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-950) 0%,
+    var(--color-primary-900) 100%
+  );
   background-size: cover;
   background-position: center;
   position: relative;
-  padding: var(--spacing-4xl) var(--spacing-lg) var(--spacing-3xl) var(--spacing-lg);
+  padding: var(--spacing-4xl) var(--spacing-lg) var(--spacing-3xl)
+    var(--spacing-lg);
   box-sizing: border-box;
   overflow: hidden;
   will-change: opacity, transform; /* Optimizes for animations */
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 /* Add subtle pattern overlay */
@@ -26,8 +33,17 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-                    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-image:
+    radial-gradient(
+      circle at 25% 25%,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px
+    ),
+    radial-gradient(
+      circle at 75% 75%,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px
+    );
   background-size: 25px 25px;
   z-index: 1;
 }
@@ -39,7 +55,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 50% 40%, rgba(0, 120, 212, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+  background: radial-gradient(
+    circle at 50% 40%,
+    rgba(0, 120, 212, 0.1) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
   z-index: 1;
 }
 
@@ -130,21 +150,23 @@
 /* Legacy CTA styles (if still needed) */
 .elmentor-hero-cta {
   display: inline-block;
-  background: #FF9800;
+  background: #ff9800;
   color: #fff;
   font-size: 1.125rem;
   font-weight: 700;
   padding: 0.85rem 2.25rem;
   border-radius: 2rem;
   text-decoration: none;
-  box-shadow: 0 2px 8px rgba(26,35,126,0.08);
-  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(26, 35, 126, 0.08);
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
 }
 
 .elmentor-hero-cta:hover,
 .elmentor-hero-cta:focus {
   background: #e07c00;
-  box-shadow: 0 4px 16px rgba(26,35,126,0.12);
+  box-shadow: 0 4px 16px rgba(26, 35, 126, 0.12);
   outline: none;
 }
 
@@ -183,9 +205,10 @@
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
   .elmentor-hero {
-    padding: var(--spacing-3xl) var(--spacing-md) var(--spacing-xl) var(--spacing-md);
+    padding: var(--spacing-3xl) var(--spacing-md) var(--spacing-xl)
+      var(--spacing-md);
   }
-  
+
   .hero-cta-container {
     flex-direction: column;
     width: 100%;
@@ -196,7 +219,7 @@
   .hero-cta-container .btn {
     width: 100%;
   }
-    .elmentor-hero-wave-divider svg {
+  .elmentor-hero-wave-divider svg {
     height: 40px;
   }
 }
@@ -205,27 +228,28 @@
 @media (max-width: 767px) {
   .elmentor-hero {
     min-height: 60vh;
-    padding: var(--spacing-2xl) var(--spacing-sm) var(--spacing-xl) var(--spacing-sm);
+    padding: var(--spacing-2xl) var(--spacing-sm) var(--spacing-xl)
+      var(--spacing-sm);
   }
-  
+
   .elmentor-hero-title {
     font-size: var(--font-size-2xl);
   }
-  
+
   .elmentor-hero-slogan {
     font-size: var(--font-size-lg);
   }
-  
+
   .elmentor-hero-subhead {
     font-size: var(--font-size-lg);
     margin-bottom: var(--spacing-xl);
   }
-  
+
   .hero-cta-container {
     flex-direction: column;
     gap: var(--spacing-sm);
   }
-  
+
   .elmentor-hero-cta {
     font-size: var(--font-size-base);
     padding: var(--spacing-sm) var(--spacing-lg);
@@ -237,7 +261,7 @@
   .elmentor-hero-title {
     font-size: var(--font-size-3xl);
   }
-  
+
   .elmentor-hero-subhead {
     font-size: var(--font-size-lg);
   }

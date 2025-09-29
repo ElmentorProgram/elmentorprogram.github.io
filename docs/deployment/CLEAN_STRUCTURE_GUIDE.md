@@ -5,9 +5,11 @@ This guide outlines the proper structure for the GitHub Pages (gh-pages) branch 
 ## Purpose
 
 The `gh-pages` branch serves one specific purpose:
+
 - Host the built version of our website for GitHub Pages
 
 It should **not** be used for:
+
 - Development work
 - Source code storage
 - Documentation beyond what's needed for the deployed site
@@ -30,6 +32,7 @@ elmentor-landing-page-clean/
 When maintaining the `gh-pages` branch:
 
 1. **Remove unnecessary files:**
+
    - Source code files (.tsx, .ts, etc.)
    - Development configuration files (tsconfig.json, etc.)
    - Scripts not needed for the deployed site
@@ -43,10 +46,12 @@ When maintaining the `gh-pages` branch:
 ## Deployment Best Practices
 
 1. **Always deploy from the main branch:**
+
    - Build the website on the `main` branch
    - Push only the build output to `gh-pages`
 
 2. **Use the provided deployment scripts:**
+
    - Scripts in `scripts/deployment/` handle the correct structure
    - They ensure only the necessary files are included
 
@@ -57,6 +62,7 @@ When maintaining the `gh-pages` branch:
 ## Verifying Proper Structure
 
 After deployment, verify that:
+
 1. The website functions correctly
 2. No unnecessary files are present
 3. The structure follows the guidelines above

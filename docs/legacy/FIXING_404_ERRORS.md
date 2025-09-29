@@ -20,10 +20,10 @@ We implemented a three-part solution to address this issue:
 
 ```tsx
 // Before
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // After
-import { createHashRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from "react-router-dom";
 ```
 
 HashRouter uses URL hashes (`#/`) instead of normal paths (`/`), which works better with static hosting like GitHub Pages because it handles routing entirely client-side.
@@ -32,35 +32,39 @@ HashRouter uses URL hashes (`#/`) instead of normal paths (`/`), which works bet
 
 ```tsx
 // Before
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-  },
-  {
-    path: '/arabic.html',
-    element: <ArabicPage />,
-  }
-], { basename: basePath });
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+    },
+    {
+      path: "/arabic.html",
+      element: <ArabicPage />,
+    },
+  ],
+  { basename: basePath },
+);
 
 // After
 const router = createHashRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
   },
   {
-    path: '/arabic',
+    path: "/arabic",
     element: <ArabicPage />,
   },
   {
-    path: '*',
-    element: <ErrorPage />
-  }
+    path: "*",
+    element: <ErrorPage />,
+  },
 ]);
 ```
 
 Note that we:
+
 - Removed the `.html` extension from the Arabic route
 - Added a catch-all route (`*`) to handle 404s gracefully
 - Removed the `basename` config since HashRouter doesn't need it
@@ -71,26 +75,28 @@ We created a custom error page that appears when a user attempts to access an in
 
 ```tsx
 const ErrorPage = () => (
-  <div style={{ 
-    padding: '2rem', 
-    textAlign: 'center', 
-    fontFamily: 'system-ui, sans-serif',
-    maxWidth: '800px',
-    margin: '0 auto' 
-  }}>
-    <h1 style={{ color: '#0078d4' }}>Oops! Page Not Found</h1>
-    <p style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>
+  <div
+    style={{
+      padding: "2rem",
+      textAlign: "center",
+      fontFamily: "system-ui, sans-serif",
+      maxWidth: "800px",
+      margin: "0 auto",
+    }}
+  >
+    <h1 style={{ color: "#0078d4" }}>Oops! Page Not Found</h1>
+    <p style={{ fontSize: "1.2rem", marginBottom: "2rem" }}>
       The page you're looking for doesn't exist or has been moved.
     </p>
-    <a 
-      href="#/" 
-      style={{ 
-        backgroundColor: '#0078d4', 
-        color: 'white',
-        padding: '0.75rem 1.5rem',
-        borderRadius: '4px',
-        textDecoration: 'none',
-        fontWeight: 'bold'
+    <a
+      href="#/"
+      style={{
+        backgroundColor: "#0078d4",
+        color: "white",
+        padding: "0.75rem 1.5rem",
+        borderRadius: "4px",
+        textDecoration: "none",
+        fontWeight: "bold",
       }}
     >
       Return to Home Page

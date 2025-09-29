@@ -9,6 +9,7 @@ The issue was resolved by:
 1. **Understanding the Problem**: The Git "dubious ownership" error occurs when Git detects that the directory you're operating in is owned by a different user than the one running Git commands. This is a security feature introduced in Git 2.35.2.
 
 2. **First Approach**: We created a script (`fix-git-ownership.ps1`) to add the repository and dist directories to Git's safe.directory configuration:
+
    ```powershell
    git config --global --add safe.directory $repoPath
    git config --global --add safe.directory $distPath
@@ -29,11 +30,13 @@ This approach completely avoids the "dubious ownership" issue by not using Git i
 ## Successful Deployment
 
 The landing page is now successfully deployed and available at:
+
 ```
 https://[your-github-username].github.io/[your-github-username]-landing-page-clean/
 ```
 
 The deployment process:
+
 1. Automatically detects your GitHub username using GitHub CLI
 2. Updates all project references with your username
 3. Builds the project with the correct base path
@@ -47,8 +50,8 @@ You now have multiple deployment options:
    ```
    .\direct-deploy.bat
    ```
-   
 2. **Fix Git Ownership then Deploy**:
+
    ```
    .\fix-git-ownership.bat
    .\gh-auto-deploy.bat
@@ -62,6 +65,7 @@ You now have multiple deployment options:
 ## Deployment Logs
 
 Check these files for detailed deployment information:
+
 - `direct-deploy.log` - Logs from the direct deployment process
 - `deploy.log` - Logs from the regular deployment process
 - `git-fix.log` - Logs from the Git ownership fix
@@ -69,10 +73,12 @@ Check these files for detailed deployment information:
 ## Success Verification
 
 A success marker file is created after successful deployment:
+
 - `direct_deployment_success_[timestamp].txt` or
 - `github_deployment_success_[timestamp].txt`
 
 This file contains:
+
 - Timestamp of the deployment
 - Your GitHub username
 - Repository URL

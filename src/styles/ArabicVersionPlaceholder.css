@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: center;
   direction: rtl;
-  font-family: 'Cairo', sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .arabic-version-container {
@@ -137,23 +137,23 @@
   .arabic-version-title {
     font-size: var(--font-size-3xl);
   }
-  
+
   .arabic-version-subtitle {
     font-size: var(--font-size-lg);
   }
-  
+
   .arabic-version-coming-soon {
     padding: var(--spacing-xl);
   }
-  
+
   .coming-soon-title {
     font-size: var(--font-size-xl);
   }
-  
+
   .coming-soon-text {
     font-size: var(--font-size-md);
   }
-  
+
   .arabic-version-cta {
     flex-direction: column;
     gap: var(--spacing-md);
@@ -164,11 +164,11 @@
   .arabic-version-title {
     font-size: var(--font-size-2xl);
   }
-  
+
   .arabic-version-subtitle {
     font-size: var(--font-size-md);
   }
-  
+
   .arabic-features-title {
     font-size: var(--font-size-lg);
   }

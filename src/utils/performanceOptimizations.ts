@@ -5,7 +5,7 @@
 
 // Track Core Web Vitals
 export const trackWebVitals = () => {
-  if ('PerformanceObserver' in window) {
+  if ("PerformanceObserver" in window) {
     // Track Cumulative Layout Shift (CLS)
     try {
       new PerformanceObserver((list) => {
@@ -15,21 +15,21 @@ export const trackWebVitals = () => {
             cls += (entry as any).value;
           }
         }
-        console.log('CLS:', cls);
-      }).observe({type: 'layout-shift', buffered: true});
+        console.log("CLS:", cls);
+      }).observe({ type: "layout-shift", buffered: true });
     } catch (e) {
-      console.log('CLS tracking not supported');
+      console.log("CLS tracking not supported");
     }
 
     // Track First Input Delay (FID)
     try {
       new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          console.log('FID:', (entry as any).processingStart - entry.startTime);
+          console.log("FID:", (entry as any).processingStart - entry.startTime);
         }
-      }).observe({type: 'first-input', buffered: true});
+      }).observe({ type: "first-input", buffered: true });
     } catch (e) {
-      console.log('FID tracking not supported');
+      console.log("FID tracking not supported");
     }
 
     // Track Largest Contentful Paint (LCP)
@@ -37,32 +37,32 @@ export const trackWebVitals = () => {
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
-        console.log('LCP:', lastEntry.startTime);
-      }).observe({type: 'largest-contentful-paint', buffered: true});
+        console.log("LCP:", lastEntry.startTime);
+      }).observe({ type: "largest-contentful-paint", buffered: true });
     } catch (e) {
-      console.log('LCP tracking not supported');
+      console.log("LCP tracking not supported");
     }
   }
 };
 
 // Optimize images with Intersection Observer
 export const optimizeImages = () => {
-  if ('IntersectionObserver' in window) {
+  if ("IntersectionObserver" in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement;
           const dataSrc = img.dataset.src;
           if (dataSrc) {
             img.src = dataSrc;
-            img.classList.remove('lazy');
+            img.classList.remove("lazy");
             observer.unobserve(img);
           }
         }
       });
     });
 
-    document.querySelectorAll('img[data-src]').forEach(img => {
+    document.querySelectorAll("img[data-src]").forEach((img) => {
       imageObserver.observe(img);
     });
   }
@@ -71,17 +71,15 @@ export const optimizeImages = () => {
 // Preload critical resources
 export const preloadCriticalResources = () => {
   // Preload critical fonts
-  const fonts = [
-    '/fonts/inter-var.woff2'
-  ];
-  
-  fonts.forEach(font => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
+  const fonts = ["/fonts/inter-var.woff2"];
+
+  fonts.forEach((font) => {
+    const link = document.createElement("link");
+    link.rel = "preload";
     link.href = font;
-    link.as = 'font';
-    link.type = 'font/woff2';
-    link.crossOrigin = 'anonymous';
+    link.as = "font";
+    link.type = "font/woff2";
+    link.crossOrigin = "anonymous";
     document.head.appendChild(link);
   });
 };
@@ -89,18 +87,18 @@ export const preloadCriticalResources = () => {
 // Initialize performance optimizations
 export const initializePerformanceOptimizations = () => {
   // Enable if not in development
-  if (import.meta.env.MODE !== 'development') {
+  if (import.meta.env.MODE !== "development") {
     trackWebVitals();
   }
-  
+
   optimizeImages();
   preloadCriticalResources();
-  
+
   // Add performance hints
-  if ('connection' in navigator) {
+  if ("connection" in navigator) {
     const connection = (navigator as any).connection;
-    if (connection && connection.effectiveType === 'slow-2g') {
-      document.documentElement.classList.add('slow-connection');
+    if (connection && connection.effectiveType === "slow-2g") {
+      document.documentElement.classList.add("slow-connection");
     }
   }
 };

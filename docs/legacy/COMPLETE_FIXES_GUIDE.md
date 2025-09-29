@@ -10,9 +10,11 @@ We've addressed two major issues:
 ## Technical Root Causes
 
 ### Navigation Issue
+
 The problem occurred because of a conflict between React Router's HashRouter and traditional HTML anchor links. When using HashRouter, the hash part of the URL (`#section-id`) is interpreted as a route path, not as an element ID to scroll to.
 
 ### Blank Page Issue
+
 The blank page issue was caused by incorrectly configured base paths in Vite. When the app was built and previewed, the assets were being loaded from the wrong paths because the base path wasn't consistently set across different environments.
 
 ## Complete Solutions Implemented
@@ -22,17 +24,21 @@ The blank page issue was caused by incorrectly configured base paths in Vite. Wh
 - Enhanced `NAV_LINKS` array with both `href` and `id` properties
 - Created a custom `handleSectionNavigation` function that:
   ```typescript
-  const handleSectionNavigation = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+  const handleSectionNavigation = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string,
+  ) => {
     e.preventDefault();
     closeMenu();
-    
+
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      
+      section.scrollIntoView({ behavior: "smooth" });
+
       // Update URL without triggering navigation
-      const newUrl = window.location.pathname + window.location.search + '#' + sectionId;
-      window.history.replaceState(null, '', newUrl);
+      const newUrl =
+        window.location.pathname + window.location.search + "#" + sectionId;
+      window.history.replaceState(null, "", newUrl);
     }
   };
   ```
@@ -46,24 +52,25 @@ The blank page issue was caused by incorrectly configured base paths in Vite. Wh
   export default defineConfig(({ command }) => {
     const config = {
       // Common config...
-    }
-    
+    };
+
     // Set the base path depending on the mode
-    if (command === 'build' || command === 'serve') {
+    if (command === "build" || command === "serve") {
       // For production build and preview
-      config.base = '/elmentor-landing-page-clean/'
+      config.base = "/elmentor-landing-page-clean/";
     } else {
       // For development
-      config.base = '/'
+      config.base = "/";
     }
-    
-    return config
-  })
+
+    return config;
+  });
   ```
 
 ## Testing Both Fixes Together
 
 ### Development Mode Testing
+
 1. Start dev server: `npm run dev`
 2. Access: http://localhost:3000/
 3. Test all navigation links
@@ -71,6 +78,7 @@ The blank page issue was caused by incorrectly configured base paths in Vite. Wh
 5. Check URL hash updates correctly
 
 ### Production Mode Testing
+
 1. Build: `npm run build`
 2. Preview: `npm run preview`
 3. Access: http://localhost:4173/elmentor-landing-page-clean/
@@ -81,18 +89,22 @@ The blank page issue was caused by incorrectly configured base paths in Vite. Wh
 ## Deployment Instructions
 
 ### Simple Deployment
+
 ```bash
 npm run build
 npm run deploy:gh-pages
 ```
 
 ### Verified Deployment with Checks
+
 Run the script:
+
 ```bash
 ./deploy-with-basepath.ps1
 ```
 
 This script:
+
 1. Cleans previous builds
 2. Builds with correct base path
 3. Verifies the index.html has correct paths
@@ -101,6 +113,7 @@ This script:
 ## Additional Resources
 
 For more detailed information, see:
+
 - `NAVIGATION_FIX.md` - Details about the navigation issue and solution
 - `BASE_PATH_FIX.md` - Details about the base path configuration fix
 - `MANUAL_DEPLOYMENT_STEPS.md` - Step-by-step deployment instructions

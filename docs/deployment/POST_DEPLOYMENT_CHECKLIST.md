@@ -79,7 +79,7 @@ Use this checklist after deploying the aymanaboghonim/DevOps Visions landing pag
 If you encounter any issues during verification, document them here:
 
 | Issue | Description | Priority | Status |
-|-------|-------------|----------|--------|
+| ----- | ----------- | -------- | ------ |
 |       |             |          |        |
 |       |             |          |        |
 

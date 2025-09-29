@@ -12,6 +12,7 @@ For a completely hands-off deployment experience with no user interaction:
 ```
 
 What it does:
+
 - Creates GitHub repository automatically (uses default username "aymanaboghonim")
 - Updates all configuration files with correct repository information
 - Commits and pushes code to GitHub
@@ -38,6 +39,7 @@ For an interactive setup experience with prompts:
 ```
 
 What it does:
+
 - Guides you through the process with interactive prompts
 - Provides colorful output with status information
 - Performs the same repository setup and deployment steps
@@ -52,6 +54,7 @@ For continuous deployment using GitHub Actions:
    - Deploy to GitHub Pages automatically
 
 To use this option:
+
 1. Push your code to GitHub (using either Option 1 or 2)
 2. Go to the repository's "Actions" tab
 3. Ensure workflows are enabled
@@ -65,6 +68,7 @@ For all deployment options, GitHub authentication is required:
 - **GitHub Actions authentication**: For Option 3, GitHub Actions handles authentication automatically.
 
 If you encounter authentication issues with silent mode:
+
 1. Run `gh auth login` manually once to set up authentication
 2. Or, set the `GITHUB_TOKEN` environment variable with a Personal Access Token
 
@@ -78,6 +82,7 @@ All deployment options create log files:
 ## Troubleshooting
 
 If deployment fails:
+
 1. Check the log files for specific error messages
 2. Ensure you have proper GitHub authentication
 3. Verify internet connectivity

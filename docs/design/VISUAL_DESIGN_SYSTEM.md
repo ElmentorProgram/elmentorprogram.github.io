@@ -3,6 +3,7 @@
 This document outlines the complete visual design system for the Elmentor Landing Page, including brand identity, visual consistency guidelines, and design specifications.
 
 ## Table of Contents
+
 - [Brand Identity](#brand-identity)
 - [Entity Differentiation](#entity-differentiation)
 - [Color Palette](#color-palette)
@@ -23,6 +24,7 @@ This document outlines the complete visual design system for the Elmentor Landin
 ### Logo Usage
 
 The Elmentor logo should:
+
 - Maintain proper spacing around all sides
 - Not be stretched or distorted
 - Be displayed prominently on the navbar and footer
@@ -44,13 +46,13 @@ Understanding the distinction between these entities is important:
 
 ## Color Palette
 
-| Element | Color Code | Usage |
-|---------|------------|-------|
-| Primary Blue | `#1E90FF` | Main brand color, buttons, accents |
-| Deep Blue | `#0057B7` | Headers, navigation |
-| Cyan | `#00C5CD` | Highlights, secondary accents |
-| Light Gray | `#F5F5F5` | Backgrounds, cards |
-| Dark Gray | `#333333` | Text, footers |
+| Element      | Color Code | Usage                              |
+| ------------ | ---------- | ---------------------------------- |
+| Primary Blue | `#1E90FF`  | Main brand color, buttons, accents |
+| Deep Blue    | `#0057B7`  | Headers, navigation                |
+| Cyan         | `#00C5CD`  | Highlights, secondary accents      |
+| Light Gray   | `#F5F5F5`  | Backgrounds, cards                 |
+| Dark Gray    | `#333333`  | Text, footers                      |
 
 ## Typography
 
@@ -80,11 +82,13 @@ Implementation can be found in `src/styles/BackgroundStyles.css`.
 ### Recent Improvements
 
 1. **News Section Enhancements**
+
    - Year-based archive functionality (2023, 2024, 2025)
    - Filtered content to show only items with public links
    - Year filter buttons for easy navigation
 
 2. **Navigation Improvements**
+
    - Enhanced navbar with professional gradient
    - Improved text visibility and contrast
    - Consistent behavior on scroll

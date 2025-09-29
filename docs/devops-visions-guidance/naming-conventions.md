@@ -66,13 +66,11 @@ const API_BASE_URL = 'https://api.example.com';
 - Be descriptive but concise
 
 Examples:
-`
-feature/user-authentication
+`feature/user-authentication
 bugfix/login-validation
 refactor/api-client
 hotfix/security-vulnerability
-release/v1.2.0
-`
+release/v1.2.0`
 
 ## Pull Request Naming
 
@@ -81,11 +79,9 @@ release/v1.2.0
 - Include type of change (feature, bugfix, etc.)
 
 Examples:
-`
-Feature: Add user authentication system (#42)
+`Feature: Add user authentication system (#42)
 Fix: Correct validation in login form (#56)
-Refactor: Improve API client performance
-`
+Refactor: Improve API client performance`
 
 ## Special Guidelines for Elmentor Landing Page
 

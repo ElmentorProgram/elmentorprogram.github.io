@@ -162,24 +162,24 @@
   .community-presence-title {
     font-size: var(--font-size-2xl);
   }
-  
+
   .community-presence-subtitle {
     font-size: var(--font-size-base);
   }
-  
+
   .category-title {
     font-size: var(--font-size-lg);
   }
-  
+
   .platform-link-card {
     padding: var(--spacing-xl) var(--spacing-lg);
     min-height: 140px;
   }
-  
+
   .platform-icon {
     font-size: 2rem;
   }
-  
+
   .platform-name {
     font-size: var(--font-size-base);
   }
@@ -193,7 +193,7 @@
   .community-presence-container {
     padding: 0 var(--spacing-md);
   }
-  
+
   .links-grid {
     grid-template-columns: 1fr;
   }

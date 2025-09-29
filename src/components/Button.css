@@ -13,7 +13,7 @@
   position: relative;
   min-height: 32px; /* Microsoft uses smaller button heights */
   padding: 0 20px; /* Microsoft uses horizontal padding only */
-  font-family: var(--font-family-sans, 'Segoe UI', sans-serif);
+  font-family: var(--font-family-sans, "Segoe UI", sans-serif);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
   line-height: 1;
@@ -26,12 +26,12 @@
   white-space: nowrap;
   background: none;
   letter-spacing: 0.5px; /* Microsoft uses slight letter spacing */
-  
+
   /* Prevent text selection */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  
+
   /* Improve tap target on touch devices */
   -webkit-tap-highlight-color: transparent;
 }
@@ -87,7 +87,9 @@
 }
 
 @keyframes btn-spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Button Variants - Microsoft Design System */
@@ -158,21 +160,23 @@
 
 /* Danger Button - Microsoft Design System */
 .btn--danger {
-  background-color: var(--color-error); /* Microsoft uses orange-red for danger */
+  background-color: var(
+    --color-error
+  ); /* Microsoft uses orange-red for danger */
   color: var(--color-white);
   border-color: var(--color-error);
 }
 
 .btn--danger:hover:not(:disabled) {
-  background-color: #BC2F00; /* Darker shade of Microsoft's red */
-  border-color: #BC2F00;
+  background-color: #bc2f00; /* Darker shade of Microsoft's red */
+  border-color: #bc2f00;
   transform: none; /* Microsoft doesn't use transform effects */
   box-shadow: none; /* Microsoft doesn't use shadow effects */
 }
 
 .btn--danger:active:not(:disabled) {
-  background-color: #9C2700; /* Even darker for pressed state */
-  border-color: #9C2700;
+  background-color: #9c2700; /* Even darker for pressed state */
+  border-color: #9c2700;
   transform: none;
 }
 
@@ -224,9 +228,15 @@
   pointer-events: none;
   transform: none !important;
   box-shadow: none !important;
-  background-color: var(--color-gray-100) !important; /* Microsoft uses light gray background for disabled */
-  color: var(--color-gray-600) !important; /* Microsoft uses medium gray text for disabled */
-  border-color: var(--color-gray-300) !important; /* Microsoft uses light gray border for disabled */
+  background-color: var(
+    --color-gray-100
+  ) !important; /* Microsoft uses light gray background for disabled */
+  color: var(
+    --color-gray-600
+  ) !important; /* Microsoft uses medium gray text for disabled */
+  border-color: var(
+    --color-gray-300
+  ) !important; /* Microsoft uses light gray border for disabled */
 }
 
 /* Loading State */
@@ -252,13 +262,13 @@
     padding: 0 16px; /* Microsoft keeps horizontal padding only */
     font-size: 14px; /* Microsoft uses smaller text on mobile */
   }
-  
+
   .btn--sm {
     min-height: 28px;
     padding: 0 12px;
     font-size: 12px;
   }
-  
+
   .btn--lg {
     min-height: 44px;
     padding: 0 20px;
@@ -271,15 +281,15 @@
   .btn {
     border-width: 3px;
   }
-  
+
   .btn--primary {
-    background-color: #1D4ED8;
-    border-color: #1D4ED8;
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
   }
-  
+
   .btn--secondary {
-    border-color: #1D4ED8;
-    color: #1D4ED8;
+    border-color: #1d4ed8;
+    color: #1d4ed8;
   }
 }
 
@@ -288,12 +298,12 @@
   .btn {
     transition: none;
   }
-  
+
   .btn:hover:not(:disabled),
   .btn:active:not(:disabled) {
     transform: none;
   }
-  
+
   .btn__spinner {
     animation: none;
   }

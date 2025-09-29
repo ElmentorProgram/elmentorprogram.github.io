@@ -21,48 +21,56 @@ body {
 }
 
 /* CSS Variables for Design System */
-:root {  /* Microsoft Design System Colors */
-  --color-primary: #0078D4; /* Microsoft Blue */
-  --color-primary-hover: #106EBE;
-  --color-primary-light: #DEECF9;
-  
+:root {
+  /* Microsoft Design System Colors */
+  --color-primary: #0078d4; /* Microsoft Blue */
+  --color-primary-hover: #106ebe;
+  --color-primary-light: #deecf9;
+
   /* Primary color shades */
-  --color-primary-50: #EFF6FC;
-  --color-primary-100: #DEECF9;
-  --color-primary-200: #C7E0F4;
-  --color-primary-300: #71AFE5;
-  --color-primary-400: #2B88D8;
-  --color-primary-500: #0078D4; /* Base color */
-  --color-primary-600: #106EBE;
-  --color-primary-700: #005A9E;
+  --color-primary-50: #eff6fc;
+  --color-primary-100: #deecf9;
+  --color-primary-200: #c7e0f4;
+  --color-primary-300: #71afe5;
+  --color-primary-400: #2b88d8;
+  --color-primary-500: #0078d4; /* Base color */
+  --color-primary-600: #106ebe;
+  --color-primary-700: #005a9e;
   --color-primary-800: #004578;
-  --color-primary-900: #002C52;
+  --color-primary-900: #002c52;
   --color-primary-950: #001526;
-  
-  --color-secondary: #605E5C; /* Microsoft Gray */
-  --color-secondary-light: #F3F2F1;
-  --color-accent: #2B88D8; /* Microsoft accent blue */
-  --color-success: #107C10; /* Microsoft Green */
-  --color-warning: #FFB900; /* Microsoft Yellow */
-  --color-error: #D83B01; /* Microsoft Red/Orange */
-  --color-white: #FFFFFF;
+
+  --color-secondary: #605e5c; /* Microsoft Gray */
+  --color-secondary-light: #f3f2f1;
+  --color-accent: #2b88d8; /* Microsoft accent blue */
+  --color-success: #107c10; /* Microsoft Green */
+  --color-warning: #ffb900; /* Microsoft Yellow */
+  --color-error: #d83b01; /* Microsoft Red/Orange */
+  --color-white: #ffffff;
   --color-black: #000000;
-  --color-gray-50: #FAF9F8;
-  --color-gray-100: #F3F2F1;
-  --color-gray-200: #EDEBE9;
-  --color-gray-300: #E1DFDD;
-  --color-gray-400: #C8C6C4;
-  --color-gray-500: #A19F9D;
-  --color-gray-600: #605E5C;
+  --color-gray-50: #faf9f8;
+  --color-gray-100: #f3f2f1;
+  --color-gray-200: #edebe9;
+  --color-gray-300: #e1dfdd;
+  --color-gray-400: #c8c6c4;
+  --color-gray-500: #a19f9d;
+  --color-gray-600: #605e5c;
   --color-gray-700: #484644;
   --color-gray-800: #323130;
-  --color-gray-900: #201F1E;
+  --color-gray-900: #201f1e;
 
   /* Typography - Microsoft Design System */
-  --font-family-sans: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
-  --font-family-mono: 'Cascadia Code', 'Segoe UI Mono', Consolas, 'Courier New', monospace;
-  --font-family-heading: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
-  --font-family-body: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+  --font-family-sans:
+    "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue",
+    sans-serif;
+  --font-family-mono:
+    "Cascadia Code", "Segoe UI Mono", Consolas, "Courier New", monospace;
+  --font-family-heading:
+    "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue",
+    sans-serif;
+  --font-family-body:
+    "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue",
+    sans-serif;
 
   /* Legacy color variables for compatibility */
   --primary-color: var(--color-primary);
@@ -78,13 +86,17 @@ body {
   --background-dark: var(--color-gray-900);
   --border-color: var(--color-gray-200);
   --border-focus: var(--color-primary);
-  
+
   /* Microsoft Design System Shadows */
-  --shadow-sm: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
-  --shadow-md: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.22), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.18);
-  --shadow-lg: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108);
-  --shadow-xl: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132), 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
-  
+  --shadow-sm:
+    0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
+  --shadow-md:
+    0 1.6px 3.6px 0 rgba(0, 0, 0, 0.22), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.18);
+  --shadow-lg:
+    0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108);
+  --shadow-xl:
+    0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132), 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
+
   /* Spacing (8px grid) */
   --spacing-xs: 4px;
   --spacing-sm: 8px;
@@ -97,7 +109,7 @@ body {
 
   /* Layout */
   --container-max-width: 1200px;
-  
+
   /* Typography */
   --font-size-xs: 12px;
   --font-size-sm: 14px;
@@ -129,15 +141,17 @@ body {
   --border-radius-lg: 16px;
   --border-radius-xl: 24px;
   --border-radius-full: 9999px;
-  
+
   /* Transitions */
   --transition-fast: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-base: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-all: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-colors: color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out;
+  --transition-colors:
+    color 150ms ease-in-out, background-color 150ms ease-in-out,
+    border-color 150ms ease-in-out;
   --transition-normal: 300ms ease-in-out;
-  
+
   /* Container */
   --container-padding: 1rem;
 }
@@ -213,12 +227,12 @@ body {
   :root {
     --container-padding: 0.75rem;
   }
-  
+
   .btn {
     padding: var(--spacing-sm) var(--spacing-md);
     font-size: var(--font-size-sm);
   }
-  
+
   .btn-lg {
     padding: var(--spacing-md) var(--spacing-lg);
     font-size: var(--font-size-base);
@@ -236,7 +250,7 @@ body {
     --background-dark: #111827;
     --border-color: #374151;
   }
-  
+
   body {
     background-color: var(--background-primary);
     color: var(--text-primary);
@@ -248,7 +262,7 @@ body {
   html {
     scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {

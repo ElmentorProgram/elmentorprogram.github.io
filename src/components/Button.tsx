@@ -1,45 +1,47 @@
-import React from 'react';
-import './Button.css';
+import React from "react";
+import "./Button.css";
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'ghost' | 'danger';
-  size?: 'sm' | 'base' | 'lg';
+  variant?: "primary" | "secondary" | "ghost" | "danger";
+  size?: "sm" | "base" | "lg";
   disabled?: boolean;
   loading?: boolean;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  type?: 'button' | 'submit' | 'reset';
+  type?: "button" | "submit" | "reset";
   className?: string;
   ariaLabel?: string;
   icon?: React.ReactNode;
-  iconPosition?: 'left' | 'right';
+  iconPosition?: "left" | "right";
   fullWidth?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
   children,
-  variant = 'primary',
-  size = 'base',
+  variant = "primary",
+  size = "base",
   disabled = false,
   loading = false,
   onClick,
-  type = 'button',
-  className = '',
+  type = "button",
+  className = "",
   ariaLabel,
   icon,
-  iconPosition = 'left',
+  iconPosition = "left",
   fullWidth = false,
   ...props
 }) => {
   const buttonClasses = [
-    'btn',
+    "btn",
     `btn--${variant}`,
     `btn--${size}`,
-    fullWidth && 'btn--full-width',
-    loading && 'btn--loading',
-    disabled && 'btn--disabled',
-    className
-  ].filter(Boolean).join(' ');
+    fullWidth && "btn--full-width",
+    loading && "btn--loading",
+    disabled && "btn--disabled",
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (disabled || loading) {
@@ -51,11 +53,9 @@ const Button: React.FC<ButtonProps> = ({
 
   const renderIcon = () => {
     if (!icon) return null;
-    
+
     return (
-      <span className={`btn__icon btn__icon--${iconPosition}`}>
-        {icon}
-      </span>
+      <span className={`btn__icon btn__icon--${iconPosition}`}>{icon}</span>
     );
   };
 
@@ -71,9 +71,9 @@ const Button: React.FC<ButtonProps> = ({
 
     return (
       <>
-        {iconPosition === 'left' && renderIcon()}
+        {iconPosition === "left" && renderIcon()}
         <span className="btn__text">{children}</span>
-        {iconPosition === 'right' && renderIcon()}
+        {iconPosition === "right" && renderIcon()}
       </>
     );
   };
@@ -84,7 +84,9 @@ const Button: React.FC<ButtonProps> = ({
       className={buttonClasses}
       onClick={handleClick}
       disabled={disabled || loading}
-      aria-label={ariaLabel || (typeof children === 'string' ? children : undefined)}
+      aria-label={
+        ariaLabel || (typeof children === "string" ? children : undefined)
+      }
       aria-disabled={disabled || loading}
       {...props}
     >

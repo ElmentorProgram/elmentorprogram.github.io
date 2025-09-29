@@ -5,6 +5,7 @@
 This project currently has two GitHub repositories:
 
 1. **Active Repository (Recommended)**:
+
    - **Name**: `elmentor-landing-page-clean`
    - **URL**: https://github.com/aymanaboghonim/elmentor-landing-page-clean
    - **GitHub Pages**: https://aymanaboghonim.github.io/elmentor-landing-page-clean/
@@ -31,9 +32,11 @@ During the development of the automated deployment process:
 To avoid confusion, we recommend one of the following:
 
 1. **Delete the legacy repository** using the provided cleanup script:
+
    ```
    .\cleanup-old-repo.bat
    ```
+
    This will permanently delete the `elmentor-landing-page-clean` repository.
 
 2. **Archive the legacy repository** by:
@@ -44,6 +47,7 @@ To avoid confusion, we recommend one of the following:
 ## Local Configuration
 
 Your local workspace is correctly configured to use the active repository:
+
 ```
 origin https://github.com/aymanaboghonim/elmentor-landing-page-clean.git
 ```

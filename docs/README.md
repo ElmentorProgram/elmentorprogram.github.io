@@ -15,6 +15,7 @@ Welcome to the documentation for the Elmentor Landing Page. This directory conta
 ## Quick Links
 
 ### Development
+
 - [Project Structure](./development/DEVELOPMENT_GUIDE.md#project-structure)
 - [Development Setup](./development/DEVELOPMENT_GUIDE.md#development-setup)
 - [Coding Standards](./development/DEVELOPMENT_GUIDE.md#coding-standards)
@@ -22,11 +23,13 @@ Welcome to the documentation for the Elmentor Landing Page. This directory conta
 - [PR Automation](./development/PR_AUTOMATION.md)
 
 ### Deployment
+
 - [Quick Deployment](./deployment/COMPREHENSIVE_GUIDE.md#deployment-options)
 - [GitHub Pages Setup](./deployment/COMPREHENSIVE_GUIDE.md#github-pages-setup)
 - [Troubleshooting](./deployment/COMPREHENSIVE_GUIDE.md#troubleshooting-common-issues)
 
 ### Design
+
 - [Brand Identity](./design/VISUAL_DESIGN_SYSTEM.md#brand-identity)
 - [Color Palette](./design/VISUAL_DESIGN_SYSTEM.md#color-palette)
 - [Typography](./design/VISUAL_DESIGN_SYSTEM.md#typography)
