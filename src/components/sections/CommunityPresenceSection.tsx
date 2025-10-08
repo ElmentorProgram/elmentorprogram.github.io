@@ -23,8 +23,8 @@ const COMMUNITY_LINKS = [
     category: 'DevOps Visions Public Community',
   },
   {
-    name: 'DevOps Visions Facebook Page',
-    url: 'https://www.facebook.com/DevOpsVisions',
+    name: 'Mohamed Radwan Facebook Account',
+    url: 'https://www.facebook.com/mradwandevops',
     icon: <FaFacebook />,
     category: 'DevOps Visions Public Community',
   },
@@ -34,7 +34,18 @@ const ECOSYSTEM_LINKS = [  {
     name: 'Elmentor Program GitHub',
     url: 'https://github.com/ElmentorProgram',
     icon: <FaGithub />,
-    logo: logoImage,
+    category: 'Broader DevOps Visions Ecosystem',
+  },
+    {
+    name: 'DevOps Visions GitHub',
+    url: 'https://github.com/DevOpsVisions',
+    icon: <FaGithub />,
+    category: 'Broader DevOps Visions Ecosystem',
+  },
+  {
+    name: 'DevOps Visions Public Community',
+    url: 'https://devopsvisions.github.io/',
+    icon: <FaGithub />, // ✅ you can swap this with FaBlog if you prefer
     category: 'Broader DevOps Visions Ecosystem',
   },
 ];
