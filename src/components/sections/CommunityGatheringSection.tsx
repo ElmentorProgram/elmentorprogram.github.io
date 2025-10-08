@@ -23,6 +23,21 @@ const COMMUNITY_GATHERINGS = [  {    id: 'japan2022',
     date: 'April 2023',
     image: 'https://raw.githubusercontent.com/MohamedRadwan-DevOps/devops-step-by-step/main/source/images/mics/usa-apr-23.jpg'
   }
+  ,
+  {
+    id: 'ksa2024',
+    title: 'KSA/Riyadh March 2024',
+    location: 'Riyadh, KSA',
+    date: 'March 2024',
+    image: 'https://raw.githubusercontent.com/MohamedRadwan-DevOps/devops-step-by-step/main/source/images/mics/egy-aug-24.jpg'
+  },
+  {
+    id: 'egypt2024',
+    title: 'Egypt/Cairo August 2024',
+    location: 'Cairo, Egypt',
+    date: 'August 2024',
+    image: 'https://raw.githubusercontent.com/MohamedRadwan-DevOps/devops-step-by-step/main/source/images/mics/egy-aug-24.jpg'
+  }
 ];
 
 const CommunityGatheringSection: React.FC = () => {
