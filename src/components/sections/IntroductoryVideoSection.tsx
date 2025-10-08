@@ -10,9 +10,9 @@ const IntroductoryVideoSection: React.FC = () => {
   return (
     <section id="intro-video" className="intro-video-section" aria-labelledby="video-title">
       <div className="intro-video-container">
-        <h2 id="video-title" className="intro-video-title">Discover DevOps Visions: Watch Our Introduction</h2>
+        <h2 id="video-title" className="intro-video-title">Discover Elmentor Program: Watch Our Introduction</h2>
         <p className="intro-video-subtitle">
-          Get a quick overview of the DevOps Visions Program and learn how it can help you achieve your career goals.
+          Get a quick overview of the Elmentor Program and learn how it can help you achieve your career goals.
         </p>
         <div className="video-responsive-wrapper">
           <iframe
@@ -22,11 +22,11 @@ const IntroductoryVideoSection: React.FC = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             loading="lazy"
-            aria-describedby="video-description"
-          ></iframe>
+            aria-describedby="video-description">
+            </iframe>
         </div>
         <p id="video-description" className="video-description">
-          This introductory video provides an overview of the DevOps Visions Program, explaining how our mentorship 
+          This introductory video provides an overview of the Elmentor Program, explaining how our mentorship 
           approach can accelerate your professional development in the tech industry.
         </p>
 
