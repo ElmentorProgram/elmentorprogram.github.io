@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import Button from '../Button';
 import '../../styles/HeroSection.css';
+import elmentorLogo from '../../../assets/elmentor-logo-BmwUH4zI.png';
 
 export default function HeroSection() {
   const heroRef = useRef<HTMLElement>(null);
@@ -13,6 +14,14 @@ export default function HeroSection() {
       {/* Background pattern overlay is handled by CSS */}
       <div className="elmentor-hero-overlay"></div>
         <div className="elmentor-hero-content">
+          
+          <img 
+            src={elmentorLogo} 
+            alt="Elmentor Program Logo" 
+            className="elmentor-logo-top"
+            style={{ width: '200px', height: 'auto' }}
+           />
+
         <h1 className="elmentor-hero-title">
           Join Elmentor Program: A Private Community for Continuous Learning and Professional Growth.<br />
           <span className="elmentor-hero-slogan">Empower through mentorship.</span>
