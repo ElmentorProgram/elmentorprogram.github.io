@@ -164,9 +164,17 @@
   }
 
   .founder-image-container {
-    width: 250px;
-    height: 250px;
-  }
+  flex-shrink: 0;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-all);
+  background-image: url('../../assets/images/founder/mohamed_radwan.jpg');
+  background-size: cover;
+  background-position: center;
+}
 
   .founder-details-container {
     text-align: left;

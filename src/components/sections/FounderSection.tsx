@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../styles/FounderSection.css';
-import founderImage from '../../assets/images/founder/mohamed-radwan.png';
+import founderImage from '../../../assets/founder/mohamed_radwan.jpg';
+
 import { FaLinkedin, FaGithub, FaBlog, FaYoutube } from 'react-icons/fa';
 import Button from '../Button';
 
@@ -25,8 +26,6 @@ const FounderSection: React.FC = () => {
               className="founder-image"
               loading="lazy"
               decoding="async"
-              width="400"
-              height="400"
             />
           </div>
           <div className="founder-details-container">
