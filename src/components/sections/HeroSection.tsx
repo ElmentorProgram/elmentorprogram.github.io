@@ -20,7 +20,7 @@ export default function HeroSection() {
             alt="Elmentor Program Logo" 
             className="elmentor-logo-top"
             style={{ width: '200px', height: 'auto' }}
-          />
+           />
 
         <h1 className="elmentor-hero-title">
           Join Elmentor Program: A Private Community for Continuous Learning and Professional Growth.<br />
