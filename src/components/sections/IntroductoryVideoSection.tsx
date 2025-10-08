@@ -22,8 +22,8 @@ const IntroductoryVideoSection: React.FC = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             loading="lazy"
-            aria-describedby="video-description"
-          ></iframe>
+            aria-describedby="video-description">
+            </iframe>
         </div>
         <p id="video-description" className="video-description">
           This introductory video provides an overview of the Elmentor Program, explaining how our mentorship 
