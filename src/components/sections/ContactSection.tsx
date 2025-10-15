@@ -46,6 +46,10 @@ const ContactSection: React.FC = () => {
             </button>
           </div>
 
+          <p className="contact-small-text" style={{ color: '#d9534f', fontWeight: 'bold' }}>
+            Please note that offers and discounts will not apply in this case.
+          </p>
+
           <div style={{ textAlign: 'center' }}>
             <button type="submit" className="messenger-contact-button">
               Start Application
