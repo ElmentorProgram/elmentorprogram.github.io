@@ -1,6 +1,6 @@
 # 🎓 Elmentor Program
 
-> **Empowering professionals through mentorship, collaboration, and continuous growth in DevOps, leadership, and software engineering.**
+> **To create a space where knowledge is exchanged freely, and continuous learning is not just encouraged—it's embedded into everything we do.**
 
 Welcome to the **Elmentor Program**—a community-driven mentorship initiative by **DevOps Visions** dedicated to fostering professional excellence. We believe in the power of knowledge sharing, peer mentorship, and building a supportive community where professionals at all levels can thrive.
 
