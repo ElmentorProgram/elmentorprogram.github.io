@@ -3,7 +3,14 @@ import Button from '../Button';
 import '../../styles/CommunityPresenceSection.css';
 import { FaGithub, FaYoutube, FaFacebook, FaBlog } from 'react-icons/fa';
 
-const COMMUNITY_LINKS = [
+interface Link {
+  name: string;
+  url: string;
+  icon: React.ReactNode;
+  category: string;
+}
+
+const COMMUNITY_LINKS: Link[] = [
   {
     name: 'DevOps Visions Community Blog',
     url: 'https://devopsvisions.github.io/',
@@ -29,7 +36,7 @@ const COMMUNITY_LINKS = [
   },
 ];
 
-const ECOSYSTEM_LINKS = [  {
+const ECOSYSTEM_LINKS: Link[] = [{
     name: 'Elmentor Program GitHub',
     url: 'https://github.com/ElmentorProgram',
     icon: <FaGithub />,
@@ -89,7 +96,6 @@ const CommunityPresenceSection: React.FC = () => {
                 role="listitem"
                 aria-label={`Visit ${link.name} - opens in new tab`}
               >
-                {link.logo && <img src={link.logo} alt={`${link.name} Logo`} className="ecosystem-logo" />}
                 <div className="platform-icon" aria-hidden="true">{link.icon}</div>
                 <span className="platform-name">{link.name}</span>
               </a>
