@@ -34,21 +34,18 @@ const ECOSYSTEM_LINKS = [  {
     url: 'https://github.com/ElmentorProgram',
     icon: <FaGithub />,
     category: 'Broader DevOps Visions Ecosystem',
-    logo: undefined,
   },
     {
     name: 'DevOps Visions GitHub',
     url: 'https://github.com/DevOpsVisions',
     icon: <FaGithub />,
     category: 'Broader DevOps Visions Ecosystem',
-    logo: undefined,
   },
   {
     name: 'DevOps Visions Public Community',
     url: 'https://devopsvisions.github.io/',
     icon: <FaGithub />, // ✅ you can swap this with FaBlog if you prefer
     category: 'Broader DevOps Visions Ecosystem',
-    logo: undefined,
   },
 ];
 
