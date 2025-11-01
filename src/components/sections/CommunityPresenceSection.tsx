@@ -2,7 +2,6 @@ import React from 'react';
 import Button from '../Button';
 import '../../styles/CommunityPresenceSection.css';
 import { FaGithub, FaYoutube, FaFacebook, FaBlog } from 'react-icons/fa';
-import logoImage from '../../assets/images/elmentor-logo.svg';
 
 const COMMUNITY_LINKS = [
   {
