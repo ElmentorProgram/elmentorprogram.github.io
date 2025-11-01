@@ -36,7 +36,7 @@ const COMMUNITY_LINKS: Link[] = [
   },
 ];
 
-const ECOSYSTEM_LINKS: Link[] = [  {
+const ECOSYSTEM_LINKS: Link[] = [{
     name: 'Elmentor Program GitHub',
     url: 'https://github.com/ElmentorProgram',
     icon: <FaGithub />,
