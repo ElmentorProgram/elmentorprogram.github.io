@@ -125,35 +125,51 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 44px; /* Microsoft uses larger touch targets */
+  width: 44px;
   height: 44px;
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1100;
+  z-index: 1300;
+  padding: 0;
+  position: relative;
 }
 .hamburger-bar {
   width: 22px;
-  height: 2px; /* Microsoft uses thinner lines */
-  background: var(--color-gray-800); /* Microsoft uses consistent dark color */
-  margin: 4px 0; /* Microsoft has more spacing between bars */
-  border-radius: 0; /* Microsoft uses flat lines */
-  transition: var(--transition-all);
+  height: 2px;
+  background: var(--color-white);
+  margin: 4px 0;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  transform-origin: center;
 }
 .elmentor-header.scrolled .hamburger-bar {
-  background: var(--color-gray-800); /* Microsoft maintains consistent color */
+  background: var(--color-gray-800);
+}
+/* Transform hamburger to X when menu is open */
+.elmentor-hamburger[aria-expanded="true"] .hamburger-bar:nth-child(1) {
+  transform: rotate(45deg) translate(var(--hamburger-transform-offset), var(--hamburger-transform-offset));
+  background: var(--color-gray-800);
+}
+.elmentor-hamburger[aria-expanded="true"] .hamburger-bar:nth-child(2) {
+  opacity: 0;
+  transform: scale(0);
+}
+.elmentor-hamburger[aria-expanded="true"] .hamburger-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(var(--hamburger-transform-offset), calc(-1 * var(--hamburger-transform-offset)));
+  background: var(--color-gray-800);
 }
 /* Mobile Styles */
 @media (max-width: 900px) {
   .elmentor-hamburger {
     display: flex !important;
-    position: fixed;
-    right: var(--spacing-lg);
-    top: var(--spacing-md);
+    position: relative;
+    right: auto;
+    top: auto;
     transform: none;
-    background: var(--color-primary);
-    border-radius: 50%;
-    box-shadow: var(--shadow-md);
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
   }
   .elmentor-nav-links {
     display: none !important;
@@ -174,68 +190,88 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: var(--color-white); /* Microsoft uses white background */
-  color: var(--color-gray-800);
+  background: linear-gradient(135deg, var(--color-mobile-menu-bg-start) 0%, var(--color-mobile-menu-bg-end) 100%);
+  color: var(--color-white);
   z-index: 1200;
   flex-direction: column;
-  align-items: flex-start; /* Microsoft aligns to left */
-  justify-content: flex-start; /* Microsoft starts from top */
-  padding: calc(var(--spacing-4xl) + 40px) var(--spacing-xl) var(--spacing-xl); /* Account for header */
-  transition: var(--transition-all);
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: calc(var(--spacing-4xl) + 40px) var(--spacing-xl) var(--spacing-xl);
+  transition: opacity 0.3s ease, transform 0.3s ease;
   opacity: 0;
+  transform: translateY(-20px);
   pointer-events: none;
-  box-shadow: var(--shadow-lg); /* Microsoft uses subtle shadows */
+  overflow-y: auto;
 }
 .elmentor-mobile-menu.open {
   display: flex;
   opacity: 1;
+  transform: translateY(0);
   pointer-events: auto;
 }
 .elmentor-mobile-menu ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 var(--spacing-xl) 0;
+  margin: 0 0 var(--spacing-2xl) 0;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg); /* Microsoft uses consistent spacing */
-  align-items: flex-start; /* Microsoft aligns to left */
-  width: 100%; /* Full width for touch targets */
+  gap: var(--spacing-md);
+  align-items: flex-start;
+  width: 100%;
 }
 .elmentor-mobile-menu a {
-  color: var(--color-gray-800); /* Microsoft uses dark gray */
-  font-size: var(--font-size-lg); /* Microsoft uses consistent font sizes */
-  font-weight: var(--font-weight-medium);
+  color: var(--color-white);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
   text-decoration: none;
-  transition: var(--transition-all);
-  padding: var(--spacing-sm) 0;
+  transition: all 0.3s ease;
+  padding: var(--spacing-md) 0;
   display: block;
-  width: 100%; /* Full width for touch targets */
+  width: 100%;
+  border-bottom: 2px solid transparent;
+  letter-spacing: 0.5px;
 }
 .elmentor-mobile-menu a:hover,
 .elmentor-mobile-menu a:focus {
-  color: var(--color-primary); /* Microsoft uses primary blue */
+  color: var(--color-white);
+  border-bottom: 2px solid var(--color-white);
+  transform: translateX(8px);
   outline: none;
 }
 .elmentor-lang-switcher-mobile {
   display: flex;
   gap: var(--spacing-md);
   align-items: center;
-  margin-top: var(--spacing-xl);
-  border-top: 1px solid var(--color-gray-200); /* Microsoft-style separator */
-  padding-top: var(--spacing-lg);
+  margin-top: auto;
+  padding-top: var(--spacing-2xl);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   width: 100%;
 }
 
 .elmentor-lang-switcher-mobile .lang-btn {
-  color: var(--color-gray-700);
-  font-size: var(--font-size-base);
-  text-shadow: none; /* Microsoft doesn't use text shadows */
-  padding: var(--spacing-xs) var(--spacing-sm);
+  color: var(--color-white);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  text-shadow: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-sm);
+  transition: all 0.3s ease;
+}
+
+.elmentor-lang-switcher-mobile .lang-btn:hover,
+.elmentor-lang-switcher-mobile .lang-btn:focus {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.elmentor-lang-switcher-mobile .lang-btn.active {
+  background: rgba(255, 255, 255, 0.25);
+  text-decoration: none;
 }
 
 .elmentor-lang-switcher-mobile .lang-divider {
-  color: var(--color-gray-400);
-  opacity: 1; /* Microsoft uses full opacity with lighter colors */
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
 }
 
 .elmentor-menu-backdrop {
@@ -244,6 +280,13 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.2);
+  background: var(--color-mobile-menu-backdrop);
   z-index: 1100;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.elmentor-menu-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
 }
