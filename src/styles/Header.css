@@ -148,7 +148,7 @@
 }
 /* Transform hamburger to X when menu is open */
 .elmentor-hamburger[aria-expanded="true"] .hamburger-bar:nth-child(1) {
-  transform: rotate(45deg) translate(7px, 7px);
+  transform: rotate(45deg) translate(var(--hamburger-transform-offset), var(--hamburger-transform-offset));
   background: var(--color-gray-800);
 }
 .elmentor-hamburger[aria-expanded="true"] .hamburger-bar:nth-child(2) {
@@ -156,7 +156,7 @@
   transform: scale(0);
 }
 .elmentor-hamburger[aria-expanded="true"] .hamburger-bar:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
+  transform: rotate(-45deg) translate(var(--hamburger-transform-offset), calc(-1 * var(--hamburger-transform-offset)));
   background: var(--color-gray-800);
 }
 /* Mobile Styles */
@@ -190,7 +190,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(135deg, rgba(0, 69, 120, 0.98) 0%, rgba(0, 120, 212, 0.98) 100%);
+  background: linear-gradient(135deg, var(--color-mobile-menu-bg-start) 0%, var(--color-mobile-menu-bg-end) 100%);
   color: var(--color-white);
   z-index: 1200;
   flex-direction: column;
@@ -280,7 +280,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--color-mobile-menu-backdrop);
   z-index: 1100;
   opacity: 0;
   transition: opacity 0.3s ease;
