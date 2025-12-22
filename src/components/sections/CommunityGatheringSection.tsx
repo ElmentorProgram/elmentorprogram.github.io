@@ -29,7 +29,7 @@ const COMMUNITY_GATHERINGS = [  {    id: 'japan2022',
     title: 'KSA/Riyadh March 2024',
     location: 'Riyadh, KSA',
     date: 'March 2024',
-    image: 'https://raw.githubusercontent.com/MohamedRadwan-DevOps/devops-step-by-step/main/source/images/mics/egy-aug-24.jpg'
+    image: 'https://raw.githubusercontent.com/MohamedRadwan-DevOps/devops-step-by-step/main/source/images/mics/ksa-mar-24.jpg'
   },
   {
     id: 'egypt2024',
