@@ -57,22 +57,22 @@ const NewsSection: React.FC = () => {
     // 2023 News
     {
       id: 5,
-      title: "Observability & AIOps at Scale with Dynatrace",
-      summary: "Technical session discussing how to implement observability and AIOps practices at enterprise scale using Dynatrace.",
+      title: "Communication Skills Session Part (3)",
+      summary: "Explore presentation skills, email etiquette, and personal branding with industry leaders in this impactful communication session.",
       date: "2023-09-05",
-      type: "technical",
-      source: "DevOps Visions Public Community",
-      link: "https://www.youtube.com/watch?v=YHSX5_vLR8Q",
+      type: "career",
+      source: "Elmentor Program",
+      link: "https://www.youtube.com/watch?v=LNmBb1Yrdko",
       year: "2023"
     },
     {
       id: 6,
-      title: "GitHub - DevOps All You Need to Know",
-      summary: "Comprehensive overview of GitHub's DevOps capabilities and integration points for modern development workflows.",
-      date: "2023-05-20",
-      type: "event",
-      source: "DevOps Visions Public Community",
-      link: "https://www.youtube.com/watch?v=nD8t6LVBTdE",
+      title: "Maximizing Productivity with Azure DevOps and Logic Apps",
+      summary: "An expert-led session on integrating Azure DevOps with Logic Apps to supercharge your workflow. Practical insights included.",
+      date: "2023-08-29",
+      type: "technical",
+      source: "Elmentor Program",
+      link: "https://www.youtube.com/watch?v=AhBsuOYnEEI&t=414s",
       year: "2023"
     }
   ];

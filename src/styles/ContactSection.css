@@ -63,7 +63,7 @@
 
 .form-group label {
   display: block;
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
   color: var(--color-primary);
   margin-bottom: var(--spacing-sm);
@@ -75,7 +75,7 @@
 .form-group textarea {
   width: 100%;
   padding: var(--spacing-sm) var(--spacing-md);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-lg);
   color: var(--color-gray-800);
   background-color: var(--color-white);
   border: 2px solid var(--color-gray-300);
@@ -129,6 +129,34 @@
   border: 1px solid var(--color-error);
 }
 
+.contact-info-title {
+  color: var(--color-gray-700) !important;
+  text-align: center;
+}
+
+.contact-info-text {
+  color: var(--color-gray-700) !important;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.contact-small-text {
+  color: var(--color-gray-700) !important;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.contact-small-text {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-700) !important;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--spacing-3xl) auto;
+  line-height: var(--line-height-relaxed);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm);
+}
+
 .message-icon {
   flex-shrink: 0;
 }
@@ -165,3 +193,34 @@
     padding: var(--spacing-md);
   }
 }
+
+
+.contact-link {
+  color: var(--color-primary-light);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.contact-link:hover {
+  text-decoration: none;
+  color: var(--color-secondary-light);
+}
+
+.messenger-contact-button {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  transition: var(--transition-all);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-size-lg);
+}
+
+.messenger-contact-button:hover {
+  background-color: var(--color-primary-dark);
+}
+

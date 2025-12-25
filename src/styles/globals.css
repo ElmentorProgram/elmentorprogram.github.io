@@ -25,6 +25,14 @@
   --color-gray-800: #262626;
   --color-gray-900: #171717;
   
+  /* Mobile Menu Colors */
+  --color-mobile-menu-bg-start: rgba(0, 69, 120, 0.98);
+  --color-mobile-menu-bg-end: rgba(0, 120, 212, 0.98);
+  --color-mobile-menu-backdrop: rgba(0, 0, 0, 0.5);
+  
+  /* Animation & Transform Values */
+  --hamburger-transform-offset: 7px;
+  
   /* Typography */
   --font-family-body: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   --font-family-heading: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;

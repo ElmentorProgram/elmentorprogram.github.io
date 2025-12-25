@@ -2,9 +2,15 @@ import React from 'react';
 import Button from '../Button';
 import '../../styles/CommunityPresenceSection.css';
 import { FaGithub, FaYoutube, FaFacebook, FaBlog } from 'react-icons/fa';
-import logoImage from '../../assets/images/elmentor-logo.svg';
 
-const COMMUNITY_LINKS = [
+interface Link {
+  name: string;
+  url: string;
+  icon: React.ReactNode;
+  category: string;
+}
+
+const COMMUNITY_LINKS: Link[] = [
   {
     name: 'DevOps Visions Community Blog',
     url: 'https://devopsvisions.github.io/',
@@ -23,18 +29,29 @@ const COMMUNITY_LINKS = [
     category: 'DevOps Visions Public Community',
   },
   {
-    name: 'DevOps Visions Facebook Page',
-    url: 'https://www.facebook.com/DevOpsVisions',
+    name: 'Mohamed Radwan Facebook Account',
+    url: 'https://www.facebook.com/mradwandevops',
     icon: <FaFacebook />,
     category: 'DevOps Visions Public Community',
   },
 ];
 
-const ECOSYSTEM_LINKS = [  {
+const ECOSYSTEM_LINKS: Link[] = [{
     name: 'Elmentor Program GitHub',
     url: 'https://github.com/ElmentorProgram',
     icon: <FaGithub />,
-    logo: logoImage,
+    category: 'Broader DevOps Visions Ecosystem',
+  },
+    {
+    name: 'DevOps Visions GitHub',
+    url: 'https://github.com/DevOpsVisions',
+    icon: <FaGithub />,
+    category: 'Broader DevOps Visions Ecosystem',
+  },
+  {
+    name: 'DevOps Visions Public Community',
+    url: 'https://devopsvisions.github.io/',
+    icon: <FaGithub />, // ✅ you can swap this with FaBlog if you prefer
     category: 'Broader DevOps Visions Ecosystem',
   },
 ];
@@ -79,7 +96,6 @@ const CommunityPresenceSection: React.FC = () => {
                 role="listitem"
                 aria-label={`Visit ${link.name} - opens in new tab`}
               >
-                {link.logo && <img src={link.logo} alt={`${link.name} Logo`} className="ecosystem-logo" />}
                 <div className="platform-icon" aria-hidden="true">{link.icon}</div>
                 <span className="platform-name">{link.name}</span>
               </a>

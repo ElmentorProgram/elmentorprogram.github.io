@@ -152,7 +152,7 @@ export default function Header() {  const [scrolled, setScrolled] = useState(fal
           </div>
         </div>
       )}
-      {isMobile && menuOpen && <div className="elmentor-menu-backdrop" onClick={closeMenu} tabIndex={-1} aria-hidden="true"></div>}
+      {isMobile && <div className={`elmentor-menu-backdrop${menuOpen ? ' open' : ''}`} onClick={closeMenu} tabIndex={-1} aria-hidden="true"></div>}
     </header>
   );
 }
